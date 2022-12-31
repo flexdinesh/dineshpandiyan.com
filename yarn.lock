@@ -1232,28 +1232,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"blogster-blog-sleek@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "blogster-blog-sleek@workspace:."
-  dependencies:
-    "@astrojs/prism": ^1.0.2
-    "@astrojs/rss": ^1.2.1
-    "@astrojs/sitemap": ^1.0.0
-    "@astrojs/tailwind": ^2.1.3
-    "@markdoc/markdoc": ^0.2.1
-    "@tailwindcss/typography": ^0.5.8
-    astro: ^1.7.1
-    astro-markdoc-renderer: 0.0.1-alpha.0
-    globby: ^13.1.3
-    gray-matter: ^4.0.3
-    prettier-plugin-astro: ^0.7.0
-    slugify: ^1.6.5
-    tailwindcss: ^3.2.4
-    typescript: ^4.9.4
-    zod: ^3.20.2
-  languageName: unknown
-  linkType: soft
-
 "boolean@npm:^3.0.1":
   version: 3.2.0
   resolution: "boolean@npm:3.2.0"
@@ -1748,6 +1726,28 @@ __metadata:
   checksum: c7bf0df7c9bfbe1cf8a678fd1b2137c4fb11be117a67bc18a0e03ae75105e8533dbfb1cda6b46beb3586ef5aed22143ef9d70713977d5fb1f9114e21455fba90
   languageName: node
   linkType: hard
+
+"dineshpandiyan-website@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "dineshpandiyan-website@workspace:."
+  dependencies:
+    "@astrojs/prism": ^1.0.2
+    "@astrojs/rss": ^1.2.1
+    "@astrojs/sitemap": ^1.0.0
+    "@astrojs/tailwind": ^2.1.3
+    "@markdoc/markdoc": ^0.2.1
+    "@tailwindcss/typography": ^0.5.8
+    astro: ^1.7.1
+    astro-markdoc-renderer: 0.0.1-alpha.0
+    globby: ^13.1.3
+    gray-matter: ^4.0.3
+    prettier-plugin-astro: ^0.7.0
+    slugify: ^1.6.5
+    tailwindcss: ^3.2.4
+    typescript: ^4.9.4
+    zod: ^3.20.2
+  languageName: unknown
+  linkType: soft
 
 "dir-glob@npm:^3.0.1":
   version: 3.0.1

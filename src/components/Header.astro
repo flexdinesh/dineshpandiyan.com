@@ -1,6 +1,6 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
 import DarkModeToggle from "./DarkModeToggle.astro";
+import Nav from "./Nav.astro";
 ---
 
 <header>
@@ -10,30 +10,32 @@ import DarkModeToggle from "./DarkModeToggle.astro";
   >
     Skip to content
   </a>
-  <nav>
-    <section class="text-text-bold">
-      <ul class="unset flex gap-4 [&>li]:p-0">
-        <li><HeaderLink href="/">Home</HeaderLink></li>
-        <li><HeaderLink href="/blog">Blog</HeaderLink></li>
-        <li><HeaderLink href="/projects">Projects</HeaderLink></li>
-      </ul>
-    </section>
-  </nav>
+  <Nav />
   <div
     class="max-[375px]:hidden justify-self-end py-2 flex items-center content-center text-text-bold"
   >
     <a
-      class="unset text-2xl ml-4 hover:text-text-link"
-      href="https://github.com/flexdinesh/blogster"
+      class="unset text-xl ml-4 hover:text-text-link"
+      href="/rss.xml"
+    >
+      <i
+        class="fa-solid fa-rss"
+        aria-hidden="true"
+        title="RSS feed"></i>
+      <span class="fa-sr-only">RSS feed</span>
+    </a>
+    <a
+      class="unset text-xl ml-4 hover:text-text-link"
+      href="https://github.com/flexdinesh"
     >
       <i
         class="fa-brands fa-github"
         aria-hidden="true"
-        title="Blogster on GitHub"></i>
-      <span class="fa-sr-only">Blogster on GitHub</span>
+        title="Dinesh on GitHub"></i>
+      <span class="fa-sr-only">Dinesh on GitHub</span>
     </a>
     <a
-      class="unset text-2xl ml-4 hover:text-text-link"
+      class="unset text-xl ml-4 hover:text-text-link"
       href="https://twitter.com/flexdinesh"
     >
       <i

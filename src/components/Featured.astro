@@ -1,0 +1,92 @@
+---
+import { readAll } from "../lib/markdoc/read";
+import { blog, work, talk, notes } from "../lib/markdoc/frontmatter.schema";
+import Label from "./Label.astro";
+
+const posts = await readAll({
+  directory: "blog",
+  frontmatterSchema: blog,
+});
+
+const workList = await readAll({
+  directory: "work",
+  frontmatterSchema: work,
+});
+
+const talks = await readAll({
+  directory: "talks",
+  frontmatterSchema: talk,
+});
+
+const notesList = await readAll({
+  directory: "notes",
+  frontmatterSchema: notes,
+});
+
+const featuredItems = [
+  ...posts.map((p) => ({ ...p, path: "blog" })),
+  ...workList.map((p) => ({ ...p, path: "work" })),
+  ...talks.map((p) => ({ ...p, path: "talks" })),
+  ...notesList.map((p) => ({ ...p, path: "notes" })),
+]
+  .filter((p) => p.frontmatter.draft !== true)
+  .filter((p) => p.frontmatter.featured === true)
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.date).valueOf() -
+      new Date(a.frontmatter.date).valueOf()
+  );
+---
+
+<section class="pt-4 pb-4">
+  <h2 class="font-bold text-xl md:text-2xl tracking-tight pb-4 text-text-heading">Latest</h2>
+  <ul>
+    {
+      featuredItems.map((item) => {
+        const formattedDate = new Date(
+          item.frontmatter.date
+        ).toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        });
+        return (
+          <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
+            <div class="title">
+              {item.frontmatter?.external ? (
+                  <a
+                    href={item.frontmatter.url}
+                    target="_blank"
+                    class="unset hover:text-text-link"
+                  >
+                    <span>{item.frontmatter.title}</span>
+                    <span>
+                      <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
+                    </span>
+                    {item.frontmatter.label ? (
+                      <Label label={item.frontmatter.label}>
+                        {item.frontmatter.label}
+                      </Label>
+                    ) : null}
+                  </a>
+                ) : (
+                  <a
+                    href={`/${item.path}/${item.slug}`}
+                    class="unset hover:text-text-link"
+                  >
+                    {item.frontmatter.title}
+                  </a>
+                )}
+              
+            </div>
+            <div class="text-text-muted text-sm italic pt-1">
+              <time datetime={item.frontmatter.date.toISOString()}>
+                {formattedDate}
+              </time>
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>

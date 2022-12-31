@@ -1,0 +1,280 @@
+/*
+  This is a customised bare minimum styles that include only the brands used in this template.
+  If you need more brands, either use brands.min.css file or copy the brands needed to this file.
+*/
+
+/* ---------------- brands.bareminimum.css ---------------- */
+:root,
+:host {
+  --fa-style-family-brands: 'Font Awesome 6 Brands';
+  --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype");
+}
+
+.fab,
+.fa-brands {
+  font-weight: 400;
+}
+
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+
+.fa-github-alt:before {
+  content: "\f113";
+}
+
+.fa-square-github:before {
+  content: "\f092";
+}
+
+.fa-github-square:before {
+  content: "\f092";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-square-twitter:before {
+  content: "\f081";
+}
+
+.fa-twitter-square:before {
+  content: "\f081";
+}
+
+/* ---------------- fontawesome.bareminimum.css ---------------- */
+
+.fa {
+  font-family: var(--fa-style-family, "Font Awesome 6 Free");
+  font-weight: var(--fa-style, 900);
+}
+
+.fa,
+.fa-classic,
+.fa-sharp,
+.fas,
+.fa-solid,
+.far,
+.fa-regular,
+.fab,
+.fa-brands {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fas,
+.fa-classic,
+.fa-solid,
+.far,
+.fa-regular {
+  font-family: 'Font Awesome 6 Free';
+}
+
+.fab,
+.fa-brands {
+  font-family: 'Font Awesome 6 Brands';
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.08333em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.07143em;
+  vertical-align: 0.05357em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.04167em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+
+.fa-ul>li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(var(--fa-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-up-right-from-square::before {
+  content: "\f35d";
+}
+
+.fa-link::before {
+  content: "\f0c1";
+}
+
+.fa-hashtag::before {
+  content: "\23";
+}
+
+.fa-bars::before {
+  content: "\f0c9";
+}
+
+.fa-xmark::before {
+  content: "\f00d";
+}
+
+.fa-rss::before {
+  content: "\f09e";
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* solid.css */
+
+ :root,
+ :host {
+   --fa-style-family-classic: 'Font Awesome 6 Free';
+   --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free';
+ }
+ 
+ @font-face {
+   font-family: 'Font Awesome 6 Free';
+   font-style: normal;
+   font-weight: 900;
+   font-display: block;
+   src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype");
+ }
+ 
+ .fas,
+ .fa-solid {
+   font-weight: 900;
+ }
