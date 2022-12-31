@@ -7,6 +7,7 @@ export const label = z.optional(z.enum([
   "dev.to",
   "medium",
   "youtube",
+  "podcast",
   "deprecated",
   "archived",
 ]));
