@@ -2,88 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* light theme */
-.theme-sleek {
-    /* tailwind amber-500 */
-    --color-primary-main: 245 158 11;
-    --color-label-blue: 186 230 253;
-    --color-label-gray: 226 232 240;
-    --color-label-yellow: 253 230 138;
-    --color-label-orange: 254 215 170;
-    --color-label-red: 254 205 211;
+@layer base {
+    :root {
+        font-family: 'Open Sans', sans-serif;
+        /* base font-size 1px larger for better visibility */
+        font-size: 1.0625em;
+        line-height: 1.75;
+    }
 
-    /* tailwind gray-700 */
-    --color-text-body: 55 65 81;
-    /* tailwind gray-700 */
-    /* #374151 */
-    --color-text-heading: 55 65 81;
-    /* tailwind gray-700 */
-    --color-text-bold: 55 65 81;
-    /* tailwind gray-500 */
-    --color-text-muted: 107 114 128;
-    /* tailwind amber-500 */
-    --color-text-link: 245 158 11;
-
-    /* black */
-    --color-text-code: 0 0 0;
-    /* black */
-    --color-text-selection: 0 0 0;
-
-    /* white */
-    --color-bg-body: 255 255 255;
-    /* tailwind orange-50 */
-    --color-bg-code: 255 247 237;
-    /* #d9f99d */
-    --color-bg-selection: 253 230 138;
-
-    /* tailwind orange-100 */
-    --color-border-code: 255 237 213;
-}
-
-/* dark theme */
-.theme-sleek.dark {
-    --color-primary-main: 250 204 21;
-    --color-label-blue: 3 105 161;
-    --color-label-gray: 51 65 85;
-    --color-label-yellow: 161 98 7;
-    --color-label-orange: 194 65 12;
-    --color-label-red: 190 18 60;
-
-    /* tailwind stone-300 */
-    --color-text-body: 214 211 209;
-    /* white */
-    --color-text-heading: 255 255 255;
-    /* white */
-    --color-text-bold: 255 255 255;
-    /* tailwind stone-400 */
-    --color-text-muted: 168 162 158;
-    /* --color-text-link: 250 204 21; */
-    --color-text-link: 34 211 238;
-    /* black */
-    --color-text-code: 255 255 255;
-    /* black */
-    --color-text-selection: 0 0 0;
-
-    /* #0e141b */
-    --color-bg-body: 14 20 27;
-    /* yellow-500 */
-    --color-bg-code: 234 179 8;
-    /* #ffd848 */
-    --color-bg-selection: 255 216 72;
-
-    /* yellow-100 */
-    --color-border-code: 254 243 199;
-}
-
-:root {
-    font-family: 'Open Sans', sans-serif;
-    /* base font-size 1px larger for better visibility */
-    font-size: 1.0625em;
-    line-height: 1.75;
-}
-
-body {
-    transition: background-color 0.3s ease;
+    body {
+        transition: background-color 0.3s ease;
+    }
 }
 
 @layer components {
