@@ -8,15 +8,14 @@
     --color-label-orange: 254 215 170;
     --color-label-red: 254 205 211;
 
-    /* tailwind gray-700 */
-    --color-text-body: 55 65 81;
-    /* tailwind gray-700 */
-    /* #374151 */
-    --color-text-heading: 55 65 81;
-    /* tailwind gray-700 */
-    --color-text-bold: 55 65 81;
-    /* tailwind gray-500 */
-    --color-text-muted: 107 114 128;
+    /* #183153 */
+    --color-text-body: 24 49 83;
+    /* #183153 */
+    --color-text-heading: 24 49 83;
+    /* #183153 */
+    --color-text-bold: 24 49 83;
+    /* tailwind slate-500 */
+    --color-text-muted: 100 116 139;
     /* tailwind amber-500 */
     --color-text-link: 245 158 11;
 
