@@ -41,6 +41,7 @@
         background-position: 0 100%;
         background-image:
             linear-gradient(to right, theme('colors.text.link'), theme('colors.text.link'));
+        padding-bottom: 2px;
     }
 
     a:not(.unset):hover {
