@@ -22,12 +22,24 @@
 
 <script>
   function updateHTMLTheme(mode: "light" | "dark") {
+    const themeColorMetaTag = document.head.querySelector(
+      'meta[name="theme-color"]'
+    );
+
     if (mode === "dark") {
       document.documentElement.classList.remove("light");
       document.documentElement.classList.add("dark");
+      if (themeColorMetaTag) {
+        // @ts-ignore
+        themeColorMetaTag.content = "#0e141b";
+      }
     } else {
       document.documentElement.classList.remove("dark");
       document.documentElement.classList.add("light");
+      if (themeColorMetaTag) {
+        // @ts-ignore
+        themeColorMetaTag.content = "#ffffff";
+      }
     }
   }
   function updateStorageTheme(mode: "light" | "dark") {
@@ -90,18 +102,10 @@
 <style>
   .light {
     transform: translateX(0.25rem);
-    background-image: linear-gradient(
-      to bottom,
-      #fbbf24,
-      #d97706
-    );
+    background-image: linear-gradient(to bottom, #fbbf24, #d97706);
   }
   .dark {
     transform: translateX(1.5rem);
-    background-image: linear-gradient(
-      to top,
-      #22d3ee,
-      #0891b2
-    );
+    background-image: linear-gradient(to top, #67e8f9, #06b6d4);
   }
 </style>
