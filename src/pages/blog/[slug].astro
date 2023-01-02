@@ -11,9 +11,13 @@ export async function getStaticPaths() {
     frontmatterSchema: blog,
   });
 
-  // we don't want to generate pages for posts that link to external websites
   const filteredPosts = posts
-    .filter((p) => p.frontmatter.draft !== true)
+    .filter((p) =>
+      import.meta.env.MODE !== "production"
+        ? true
+        : p.frontmatter.draft !== true
+    )
+    // we don't want to generate pages for posts that link to external websites
     .filter(({ frontmatter }) => !frontmatter.external);
 
   return filteredPosts.map((post) => {

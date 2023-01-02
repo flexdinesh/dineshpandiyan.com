@@ -29,7 +29,9 @@ const featuredItems = [
   ...talks.map((p) => ({ ...p, path: "talks" })),
   ...notesList.map((p) => ({ ...p, path: "notes" })),
 ]
-  .filter((p) => p.frontmatter.draft !== true)
+  .filter((p) =>
+    import.meta.env.MODE !== "production" ? true : p.frontmatter.draft !== true
+  )
   .filter((p) => p.frontmatter.featured === true)
   .sort(
     (a, b) =>
@@ -54,30 +56,29 @@ const featuredItems = [
           <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
             <div class="title">
               {item.frontmatter?.external ? (
-                  <a
-                    href={item.frontmatter.url}
-                    target="_blank"
-                    class="unset hover:text-text-link"
-                  >
-                    <span>{item.frontmatter.title}</span>
-                    <span>
-                      <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
-                    </span>
-                    {item.frontmatter.label ? (
-                      <Label label={item.frontmatter.label}>
-                        {item.frontmatter.label}
-                      </Label>
-                    ) : null}
-                  </a>
-                ) : (
-                  <a
-                    href={`/${item.path}/${item.slug}`}
-                    class="unset hover:text-text-link"
-                  >
-                    {item.frontmatter.title}
-                  </a>
-                )}
-              
+                <a
+                  href={item.frontmatter.url}
+                  target="_blank"
+                  class="unset hover:text-text-link"
+                >
+                  <span>{item.frontmatter.title}</span>
+                  <span>
+                    <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
+                  </span>
+                  {item.frontmatter.label ? (
+                    <Label label={item.frontmatter.label}>
+                      {item.frontmatter.label}
+                    </Label>
+                  ) : null}
+                </a>
+              ) : (
+                <a
+                  href={`/${item.path}/${item.slug}`}
+                  class="unset hover:text-text-link"
+                >
+                  {item.frontmatter.title}
+                </a>
+              )}
             </div>
             <div class="text-text-muted text-sm italic pt-1">
               <time datetime={item.frontmatter.date.toISOString()}>
