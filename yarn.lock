@@ -1094,13 +1094,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-markdoc-renderer@npm:0.0.1-alpha.0":
-  version: 0.0.1-alpha.0
-  resolution: "astro-markdoc-renderer@npm:0.0.1-alpha.0"
+"astro-markdoc-renderer@npm:0.0.1-alpha.1":
+  version: 0.0.1-alpha.1
+  resolution: "astro-markdoc-renderer@npm:0.0.1-alpha.1"
   dependencies:
     "@markdoc/markdoc": ^0.2.1
     markdown-it: ^13.0.1
-  checksum: ea20ec6d5aef9d95f1d4b329642e8b5507e7dd1c3e1ebb7ffd76c492100b2dbd418725b8327e46dbd6ce589bace4c8b3345519ae6f67d2982ff5f1d2d735985d
+  checksum: c8ff87f60ab56722c6d148a4404f1cba9b6549f4bd7942db38cbba3b1efba2c7e0064b9e8b324782dbd0d8517f3bbebf71e30d98afb44d05968d4d61c602250c
   languageName: node
   linkType: hard
 
@@ -1740,7 +1740,7 @@ __metadata:
     "@markdoc/markdoc": ^0.2.1
     "@tailwindcss/typography": ^0.5.8
     astro: ^1.8.0
-    astro-markdoc-renderer: 0.0.1-alpha.0
+    astro-markdoc-renderer: 0.0.1-alpha.1
     globby: ^13.1.3
     gray-matter: ^4.0.3
     prettier-plugin-astro: ^0.7.0
