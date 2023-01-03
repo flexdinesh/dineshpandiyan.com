@@ -45,14 +45,14 @@
     --color-label-orange: 194 65 12;
     --color-label-red: 190 18 60;
 
-    /* tailwind stone-300 */
-    --color-text-body: 214 211 209;
+    /* tailwind gray-300 */
+    --color-text-body: 209 213 219;
     /* white */
     --color-text-heading: 255 255 255;
     /* white */
     --color-text-bold: 255 255 255;
-    /* tailwind stone-400 */
-    --color-text-muted: 168 162 158;
+    /* tailwind gray-400 */
+    --color-text-muted: 156 163 175;
     /* --color-text-link: 250 204 21; */
     --color-text-link: 34 211 238;
     /* black */
