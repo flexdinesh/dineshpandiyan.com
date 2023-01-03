@@ -40,11 +40,8 @@ module.exports = {
           css: {
             a: {
               "text-decoration": "none",
-              "background-repeat": "no-repeat",
-              "background-size": "100% 1.5px",
-              "background-position": "0 100%",
-              "background-image":
-                "linear-gradient(to right, rgb(var(--color-text-link)/1), rgb(var(--color-text-link)/1))",
+              "border-bottom": "1.25px solid rgb(var(--color-text-link))",
+              color: "rgb(var(--color-text-bold))",
               "&:hover": {
                 color: "rgb(var(--color-text-link))",
               },

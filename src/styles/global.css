@@ -37,11 +37,9 @@
     a:not(.unset) {
         text-decoration: none;
         background-repeat: no-repeat;
-        background-size: 100% 1.5px;
-        background-position: 0 100%;
-        background-image:
-            linear-gradient(to right, theme('colors.text.link'), theme('colors.text.link'));
-        padding-bottom: 2px;
+        border-bottom: 1.25px solid theme('colors.text.link');
+        font-weight: 500;
+        color: theme('colors.text.bold');
     }
 
     a:not(.unset):hover {
