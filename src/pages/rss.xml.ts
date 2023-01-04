@@ -10,7 +10,11 @@ export const get = async () => {
   });
 
   const sortedPosts = posts
-    .filter((p) => p.frontmatter.draft !== true)
+      .filter((p) =>
+      import.meta.env.MODE !== "production"
+        ? true
+        : p.frontmatter.draft !== true
+    )
     .sort(
       (a, b) =>
         new Date(b.frontmatter.date).valueOf() -
