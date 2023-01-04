@@ -1,5 +1,4 @@
 ---
-import path from 'path';
 import { readOne, readAll } from "../../lib/markdoc/read";
 import { blog } from "../../lib/markdoc/frontmatter.schema";
 import Renderer from "../../components/Renderer.astro";
@@ -38,7 +37,8 @@ const { content, frontmatter } = await readOne({
   frontmatterSchema: blog,
 });
 
-const ogImageAbsoluteUrl = frontmatter.external === false && frontmatter.ogImagePath ? path.join(SITE_URL, frontmatter.ogImagePath): undefined;
+const ogImageAbsoluteUrl = frontmatter.external === false && frontmatter.ogImagePath ? new URL(frontmatter.ogImagePath, SITE_URL): undefined;
+
 ---
 
 <ContentLayout title={frontmatter.title} date={frontmatter.date}>

@@ -1,5 +1,4 @@
 ---
-import path from "path";
 import { getBlogPostMeta } from "../lib/seo";
 import {
   SITE_TITLE,
@@ -14,7 +13,7 @@ export interface Props {
   title?: string;
   description?: string;
   publishDate: string;
-  ogImageAbsoluteUrl?: string;
+  ogImageAbsoluteUrl?: URL;
   ogImageAltText?: string;
   ogImageWidth?: number;
   ogImageHeight?: number;
@@ -35,11 +34,11 @@ const { meta, og, twitter } = getBlogPostMeta({
   title: title || SITE_TITLE,
   description: description || SITE_DESCRIPTION,
   baseUrl: SITE_URL,
-  pageUrl: path.join(SITE_URL, pathUrl),
+  pageUrl: new URL(pathUrl, SITE_URL).toString(),
   authorName: MY_NAME,
   publishDate,
   ogImageAbsoluteUrl: ogImageAbsoluteUrl
-    ? `${ogImageAbsoluteUrl}?v=1`
+    ? `${ogImageAbsoluteUrl.toString()}?v=1`
     : undefined,
   ogImageAltText,
   ogImageWidth,
