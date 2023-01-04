@@ -1,8 +1,8 @@
 ---
-draft: true
 featured: true
 external: false
 title: 2022 Year in Review
+description: A review of the year 2022, the opportunities, the gratitude and what I'm looking forward to in the new year.
 date: 2023-01-04
 ogImagePath: /images/blog/2022-year-in-review-cover.png
 ---
@@ -10,7 +10,6 @@ ogImagePath: /images/blog/2022-year-in-review-cover.png
 ![2022 Year In Review Cover](/images/blog/2022-year-in-review-cover.png)
 
 2022 was an interesting year. I got out of the lockdown mindset. I started traveling. I started waking up early. I started exercising every day. I started seeing past the Twitter bubble. I learnt to lead. I learnt to manage my time. Most importantly I learnt to prioritize and get things done.
-
 
 - [I joined The 5AM Club](#i-joined-the-5am-club)
 - [Lots of GraphQL](#lots-of-graphql)
@@ -69,7 +68,7 @@ Announcement post: [Introducing Blogster](https://twitter.com/flexdinesh/status/
 
 > Astro is a web framework for building fast, content-focused websites.
 
-[Astro](https://astro.build) v1 was [announced in August 2022](https://astro.build/blog/astro-1). I took it for a spin and immediately liked Astro's opinions and abstractions. They are well laid out. The component model, web components, prerendering, ssr, it all just clicked. It seemed like the perfect tool to build static content websites. After working with it for a few months I am now convinced that Astro is in fact the perfect choice for building content driven static websites. I wanted to rebuild my blog with Astro. But this time I wanted to experiment with all the best practices out there for building performant personal blogs. And I did. I open sourced everything I learnt as [Blogster](https://github.com/flexdinesh/blogster), a collection of community themes for Astro.
+[Astro](https://astro.build) v1 was [announced in August 2022](https://astro.build/blog/astro-1). I took it for a spin and immediately liked Astro's well laid out opinions and abstractions. The component model, web components, prerendering, ssr, it all just clicked. It seemed like the perfect tool to build static content websites. After working with it for a few months I am now convinced that Astro is in fact the perfect choice for building content driven static websites. I wanted to rebuild my blog with Astro. But this time I wanted to experiment with all the best practices out there for building performant personal blogs. And I did. I open sourced everything I learned as [Blogster](https://github.com/flexdinesh/blogster), a collection of community themes for Astro.
 
 I used this opportunity to experiment with [Markdoc](https://markdoc.dev) and I am now convinced that Markdoc is the best tool out there to work with markdown in code. Blogster's markdown is powered by Markdoc.
 
