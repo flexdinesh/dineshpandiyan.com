@@ -47,6 +47,7 @@ const ogImageAbsoluteUrl = frontmatter.external === false && frontmatter.ogImage
     description={frontmatter.external ? undefined : frontmatter.description}
     publishDate={frontmatter.date.toISOString()}
     ogImageAbsoluteUrl={ogImageAbsoluteUrl}
+    pathUrl={`/blog/${slug}`}
     ogImageWidth={1200}
     ogImageHeight={630}
     slot="meta"

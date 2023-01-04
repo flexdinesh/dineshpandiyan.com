@@ -37,6 +37,7 @@ const { content, frontmatter } = await readOne({
   <BlogPostMeta
     title={frontmatter.title}
     publishDate={frontmatter.date.toISOString()}
+    pathUrl={`/talks/${slug}`}
     slot="meta"
   />
   <Renderer content={content} slot="content" />
