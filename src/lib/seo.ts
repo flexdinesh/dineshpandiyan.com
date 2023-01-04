@@ -160,8 +160,8 @@ export function getBlogPostMeta({
     publishDate: publishDate,
     image: ogImageAbsoluteUrl,
     imageAlt: ogImageAltText,
-    imageWidth: ogImageWidth ? String(ogImageWidth) : undefined,
-    imageHeight: ogImageHeight ? String(ogImageHeight) : undefined,
+    imageWidth: ogImageAbsoluteUrl && ogImageWidth ? String(ogImageWidth) : undefined,
+    imageHeight: ogImageAbsoluteUrl && ogImageHeight ? String(ogImageHeight) : undefined,
   };
 
   const twitter: BlogPostTwitterMeta = {
