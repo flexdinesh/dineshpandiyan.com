@@ -4,6 +4,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        body: ["Inconsolata", "sans-serif"],
+        heading: ["Nunito", "sans-serif"],
+      },
       colors: {
         transparent: "transparent",
         current: "currentColor",

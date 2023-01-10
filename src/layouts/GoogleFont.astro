@@ -18,7 +18,7 @@
   woff/woff2 assets downloaded using google-webfonts-helper:
   https://gwfh.mranftl.com/fonts/open-sans?subsets=latin
 */
-// favourites - Fira Mono, Fira Code, Work Sans
+// favourites - Fira Mono, Fira Code, Work Sans, Inconsolata
 ---
 
 <!-- 
@@ -27,113 +27,106 @@
     to check how your page will look with the new font.
 -->
 
-<!-- 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=block"
-    rel="stylesheet"
-  />  
--->
+
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inconsolata:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=block"
+  rel="stylesheet"
+/> 
+<link
+  href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=block"
+  rel="stylesheet"
+/>  -->
 
 <Fragment>
   <link
     rel="preload"
-    href="/fonts/work-sans-v18-latin-regular.woff2"
+    href="/fonts/inconsolata/inconsolata-v31-latin-regular.woff2"
     as="font"
     type="font/woff2"
     crossorigin="crossorigin"
   />
   <link
     rel="preload"
-    href="/fonts/work-sans-v18-latin-500.woff2"
+    href="/fonts/inconsolata/inconsolata-v31-latin-500.woff2"
     as="font"
     type="font/woff2"
     crossorigin="crossorigin"
   />
   <link
     rel="preload"
-    href="/fonts/work-sans-v18-latin-600.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin="crossorigin"
-  /> 
-  <link
-    rel="preload"
-    href="/fonts/work-sans-v18-latin-700.woff2"
+    href="/fonts/inconsolata/inconsolata-v31-latin-700.woff2"
     as="font"
     type="font/woff2"
     crossorigin="crossorigin"
   />
   <link
     rel="preload"
-    href="/fonts/work-sans-v18-latin-800.woff2"
+    href="/fonts/nunito/nunito-v25-latin-700.woff2"
     as="font"
     type="font/woff2"
     crossorigin="crossorigin"
   />
   <link
     rel="preload"
-    href="/fonts/work-sans-v18-latin-italic.woff2"
+    href="/fonts/nunito/nunito-v25-latin-800.woff2"
     as="font"
     type="font/woff2"
     crossorigin="crossorigin"
   />
   <style is:inline>
-    /* work-sans-regular - latin */
+    /* inconsolata-regular - latin */
     @font-face {
-      font-family: 'Work Sans';
+      font-family: 'Inconsolata';
       font-style: normal;
       font-weight: 400;
       src: local(''),
-          url('/fonts/work-sans-v18-latin-regular.woff2') format('woff2'),
-          url('/fonts/work-sans-v18-latin-regular.woff') format('woff');
+          url('/fonts/inconsolata/inconsolata-v31-latin-regular.woff2') format('woff2'),
+          url('/fonts/inconsolata/inconsolata-v31-latin-regular.woff') format('woff');
     }
-    /* work-sans-500 - latin */
+
+
+    /* inconsolata-500 - latin */
     @font-face {
-      font-family: 'Work Sans';
+      font-family: 'Inconsolata';
       font-style: normal;
       font-weight: 500;
       src: local(''),
-          url('/fonts/work-sans-v18-latin-500.woff2') format('woff2'),
-          url('/fonts/work-sans-v18-latin-500.woff') format('woff');
+          url('/fonts/inconsolata/inconsolata-v31-latin-500.woff2') format('woff2'),
+          url('/fonts/inconsolata/inconsolata-v31-latin-500.woff') format('woff');
     }
-    /* work-sans-600 - latin */
+
+    /* inconsolata-700 - latin */
     @font-face {
-      font-family: 'Work Sans';
-      font-style: normal;
-      font-weight: 600;
-      src: local(''),
-          url('/fonts/work-sans-v18-latin-600.woff2') format('woff2'),
-          url('/fonts/work-sans-v18-latin-600.woff') format('woff');
-    }
-    /* work-sans-700 - latin */
-    @font-face {
-      font-family: 'Work Sans';
+      font-family: 'Inconsolata';
       font-style: normal;
       font-weight: 700;
       src: local(''),
-          url('/fonts/work-sans-v18-latin-700.woff2') format('woff2'),
-          url('/fonts/work-sans-v18-latin-700.woff') format('woff');
+          url('/fonts/inconsolata/inconsolata-v31-latin-700.woff2') format('woff2'),
+          url('/fonts/inconsolata/inconsolata-v31-latin-700.woff') format('woff');
     }
-    /* work-sans-800 - latin */
+
+    /* nunito-700 - latin */
     @font-face {
-      font-family: 'Work Sans';
+      font-family: 'Nunito';
+      font-style: normal;
+      font-weight: 700;
+      src: local(''),
+          url('/fonts/nunito/nunito-v25-latin-700.woff2') format('woff2'),
+          url('/fonts/nunito/nunito-v25-latin-700.woff') format('woff');
+    }
+
+    /* nunito-800 - latin */
+    @font-face {
+      font-family: 'Nunito';
       font-style: normal;
       font-weight: 800;
       src: local(''),
-          url('/fonts/work-sans-v18-latin-800.woff2') format('woff2'),
-          url('/fonts/work-sans-v18-latin-800.woff') format('woff');
+          url('/fonts/nunito/nunito-v25-latin-800.woff2') format('woff2'),
+          url('/fonts/nunito/nunito-v25-latin-800.woff') format('woff');
     }
-    /* work-sans-italic - latin */
-    @font-face {
-      font-family: 'Work Sans';
-      font-style: italic;
-      font-weight: 400;
-      src: local(''),
-          url('/fonts/work-sans-v18-latin-italic.woff2') format('woff2'),
-          url('/fonts/work-sans-v18-latin-italic.woff') format('woff');
-    }
+
   </style>
 </Fragment>
 
