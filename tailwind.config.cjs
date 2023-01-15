@@ -99,7 +99,7 @@ module.exports = {
             },
             "blockquote::before": {
               "font-family": "Arial",
-              content: "open-quote",
+              content: "'“'",
               "font-size": "4em",
               color: "rgb(var(--color-text-link))",
               position: "absolute",
