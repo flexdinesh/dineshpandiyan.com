@@ -12,6 +12,7 @@
         font-size: 1.125em;
         line-height: 1.75;
         scroll-behavior: smooth;
+        transition: background-color 0.3s ease;
     }
 
     h1,
@@ -21,10 +22,6 @@
     h5,
     h6 {
         font-family: theme('fontFamily.heading');
-    }
-
-    body {
-        transition: background-color 0.3s ease;
     }
 }
 
