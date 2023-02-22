@@ -1,5 +1,6 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
 import { defineConfig } from "astro/config";
+import prefetch from "@astrojs/prefetch";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
@@ -27,13 +28,19 @@ if (isBuild) {
   BASE_URL = LIVE_URL;
 }
 
+// https://astro.build/config
 export default defineConfig({
-  server: { port: SERVER_PORT },
+  server: {
+    port: SERVER_PORT,
+  },
   site: BASE_URL,
   integrations: [
     sitemap(),
     tailwind({
-      config: { applyBaseStyles: false },
+      config: {
+        applyBaseStyles: false,
+      },
     }),
+    prefetch(),
   ],
 });
