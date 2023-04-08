@@ -111,11 +111,10 @@ export function getPageMeta({
   };
 }
 
-export function getBlogPostMeta({
+export function getContentPageMeta({
   title: pageTitle,
   description,
   canonicalUrl,
-  baseUrl,
   pageUrl,
   authorName,
   publishDate,
@@ -129,7 +128,6 @@ export function getBlogPostMeta({
   title: string;
   description: string;
   canonicalUrl?: string;
-  baseUrl: string;
   pageUrl: string;
   authorName?: string;
   publishDate: string;

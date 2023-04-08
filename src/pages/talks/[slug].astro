@@ -2,7 +2,7 @@
 import { readOne, readAll } from "../../lib/markdoc/read";
 import { talk } from "../../lib/markdoc/frontmatter.schema";
 import Renderer from "../../components/Renderer.astro";
-import BlogPostMeta from "../../components/BlogPostMeta.astro";
+import ContentPageMeta from "../../components/ContentPageMeta.astro";
 import ContentLayout from "../../layouts/ContentLayout.astro";
 
 export async function getStaticPaths() {
@@ -34,10 +34,10 @@ const { content, frontmatter } = await readOne({
 ---
 
 <ContentLayout title={frontmatter.title} date={frontmatter.date}>
-  <BlogPostMeta
+  <ContentPageMeta
     title={frontmatter.title}
     publishDate={frontmatter.date.toISOString()}
-    pathUrl={`/talks/${slug}`}
+    pagePath={`/talks/${slug}`}
     slot="meta"
   />
   <Renderer content={content} slot="content" />

@@ -2,7 +2,7 @@
 import { readOne, readAll } from "../../lib/markdoc/read";
 import { blog } from "../../lib/markdoc/frontmatter.schema";
 import Renderer from "../../components/Renderer.astro";
-import BlogPostMeta from "../../components/BlogPostMeta.astro";
+import ContentPageMeta from "../../components/ContentPageMeta.astro";
 import ContentLayout from "../../layouts/ContentLayout.astro";
 import { SITE_URL } from "../../config";
 
@@ -42,12 +42,12 @@ const ogImageAbsoluteUrl = frontmatter.external === false && frontmatter.ogImage
 ---
 
 <ContentLayout title={frontmatter.title} date={frontmatter.date}>
-  <BlogPostMeta
+  <ContentPageMeta
     title={frontmatter.title}
     description={frontmatter.external ? undefined : frontmatter.description}
     publishDate={frontmatter.date.toISOString()}
     ogImageAbsoluteUrl={ogImageAbsoluteUrl}
-    pathUrl={`/blog/${slug}`}
+    pagePath={`/blog/${slug}`}
     ogImageWidth={1200}
     ogImageHeight={630}
     slot="meta"

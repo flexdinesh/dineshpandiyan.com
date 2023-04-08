@@ -1,5 +1,5 @@
 ---
-import { getBlogPostMeta } from "../lib/seo";
+import { getContentPageMeta } from "../lib/seo";
 import {
   SITE_TITLE,
   SITE_DESCRIPTION,
@@ -9,7 +9,7 @@ import {
 } from "../config";
 
 export interface Props {
-  pathUrl: string;
+  pagePath: string;
   title?: string;
   description?: string;
   publishDate: string;
@@ -20,7 +20,7 @@ export interface Props {
 }
 
 const {
-  pathUrl,
+  pagePath,
   title,
   description,
   publishDate,
@@ -30,11 +30,10 @@ const {
   ogImageHeight,
 } = Astro.props;
 
-const { meta, og, twitter } = getBlogPostMeta({
+const { meta, og, twitter } = getContentPageMeta({
   title: title || SITE_TITLE,
   description: description || SITE_DESCRIPTION,
-  baseUrl: SITE_URL,
-  pageUrl: new URL(pathUrl, SITE_URL).toString(),
+  pageUrl: new URL(pagePath, SITE_URL).toString(),
   authorName: MY_NAME,
   publishDate,
   ogImageAbsoluteUrl: ogImageAbsoluteUrl
