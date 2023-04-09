@@ -7,6 +7,7 @@ import CodePenEmbed from "./CodePenEmbed.astro";
 import GitHubGistEmbed from "./GitHubGistEmbed.astro";
 import CodeBlock from "./CodeBlock.astro";
 import Heading from "./Heading.astro";
+import Image from "./Image.astro";
 
 type Props = {
   content: Content;
@@ -15,6 +16,10 @@ type Props = {
 const { content } = Astro.props;
 
 const components = {
+  Image: {
+    Component: Image,
+    props: {},
+  },
   Heading: {
     Component: Heading,
     props: {},

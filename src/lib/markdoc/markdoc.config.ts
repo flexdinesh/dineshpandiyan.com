@@ -100,6 +100,13 @@ export const config: Config = {
     },
   },
   nodes: {
+    image: {
+      render: "Image",
+      attributes: {
+        src: { type: String, required: true },
+        alt: { type: String, required: true },
+      },
+    },
     heading: {
       render: "Heading",
       attributes: {
