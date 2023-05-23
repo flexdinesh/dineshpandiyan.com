@@ -11,6 +11,7 @@ export const label = z.optional(
     "podcast",
     "deprecated",
     "archived",
+    "thoughts",
   ])
 );
 
