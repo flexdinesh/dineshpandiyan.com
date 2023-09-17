@@ -29,5 +29,6 @@
   "devDependencies": {
     "prettier-plugin-astro": "^0.8.0",
     "typescript": "^5.0.4"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }
