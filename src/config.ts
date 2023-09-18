@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = "Dinesh Pandiyan";
 export const SITE_DESCRIPTION =
-  "Learn about modern web development and web performance. HTML, CSS, JavaScript, React, Astro, Next.js, Remix and more.";
+  "I write about modern web development and web performance. From HTML and CSS to JavaScript, React, Astro, Next.js, Remix, GraphQL, and beyond – I love diving into it all.";
 export const TWITTER_HANDLE = "@flexdinesh";
 export const MY_NAME = "Dinesh Pandiyan";
 
