@@ -10,7 +10,7 @@ export const get = async () => {
   });
 
   const sortedPosts = posts
-      .filter((p) =>
+    .filter((p) =>
       import.meta.env.MODE !== "production"
         ? true
         : p.frontmatter.draft !== true
@@ -26,7 +26,7 @@ export const get = async () => {
   // https://example.com/ => https://example.com
   baseUrl = baseUrl.replace(/\/+$/g, "");
 
-  const rssItems = sortedPosts.map(({ frontmatter, slug }) => {
+  const rssItems = sortedPosts.map(({ frontmatter, slug, nonNumericSlug }) => {
     if (frontmatter.external) {
       const title = frontmatter.title;
       const pubDate = frontmatter.date;
@@ -42,7 +42,7 @@ export const get = async () => {
     const title = frontmatter.title;
     const pubDate = frontmatter.date;
     const description = frontmatter.description;
-    const link = `${baseUrl}/blog/${slug}`;
+    const link = `${baseUrl}/blog/${nonNumericSlug}`;
 
     return {
       title,

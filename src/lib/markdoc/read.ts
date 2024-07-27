@@ -65,8 +65,17 @@ export async function read<T extends z.ZodTypeAny>({
   }
   const fileNameWithoutExtension = filename.replace(/\.[^.]*$/, "");
 
+  const hyphenatedSplit = fileNameWithoutExtension.split("-");
+  let nonNumericSlug = fileNameWithoutExtension;
+  if (hyphenatedSplit.length) {
+    if (!isNaN(Number(hyphenatedSplit[0]))) {
+      const num = Number(hyphenatedSplit[0]);
+      nonNumericSlug = fileNameWithoutExtension.replace(`${num}-`, "");
+    }
+  }
   return {
     slug: fileNameWithoutExtension,
+    nonNumericSlug,
     content: transformedContent,
     frontmatter: validatedFrontmatter,
   };

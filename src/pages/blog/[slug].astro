@@ -21,24 +21,39 @@ export async function getStaticPaths() {
     // we don't want to generate pages for posts that link to external websites
     .filter(({ frontmatter }) => !frontmatter.external);
 
-  return filteredPosts.map((post) => {
-    return { params: { slug: post.slug } };
+  const ret = filteredPosts.map((post) => {
+    const slug = post.slug;
+    return {
+      params: {
+        slug: post.nonNumericSlug,
+      },
+      props: {
+        actualSlug: slug,
+        nonNumbericSlug: post.nonNumericSlug,
+      },
+    };
   });
+
+  return ret;
 }
 
 const { slug } = Astro.params;
+const {actualSlug, nonNumbericSlug} = Astro.props;
+
 if (typeof slug !== "string") {
   throw Error(`slug should be string. Received: ${slug}`);
 }
 
 const { content, frontmatter } = await readOne({
   directory: "blog",
-  slug,
+  slug: actualSlug,
   frontmatterSchema: blog,
 });
 
-const ogImageAbsoluteUrl = frontmatter.external === false && frontmatter.ogImagePath ? new URL(frontmatter.ogImagePath, SITE_URL): undefined;
-
+const ogImageAbsoluteUrl =
+  frontmatter.external === false && frontmatter.ogImagePath
+    ? new URL(frontmatter.ogImagePath, SITE_URL)
+    : undefined;
 ---
 
 <ContentLayout title={frontmatter.title} date={frontmatter.date}>
@@ -47,7 +62,7 @@ const ogImageAbsoluteUrl = frontmatter.external === false && frontmatter.ogImage
     description={frontmatter.external ? undefined : frontmatter.description}
     publishDate={frontmatter.date.toISOString()}
     ogImageAbsoluteUrl={ogImageAbsoluteUrl}
-    pagePath={`/blog/${slug}`}
+    pagePath={`/blog/${nonNumbericSlug}`}
     ogImageWidth={1200}
     ogImageHeight={630}
     slot="meta"
