@@ -65,7 +65,7 @@ router.get("/users-with-tasks", async function (request, response) {
         ...user,
         tasks: tasksForUser,
       };
-    })
+    }),
   );
 
   return usersWithTasks;
@@ -113,6 +113,6 @@ All the requests from the resolvers of the same type (`User.tasks`) are queued i
 - N+1 data fetching means you are sending more requests than necessary to fetch the data you need.
 - It is easy to avoid N+1 data fetching in REST APIs.
 - It is not easy to avoid N+1 data fetching in GraphQL because of the way resolvers are designed to work.
-- I have published an [npm package](https://www.npmjs.com/package/next-batch) to help solve the N+1 problem in GraphQL resolvers  with a simple, _no-setup-needed_ API.
+- I have published an [npm package](https://www.npmjs.com/package/next-batch) to help solve the N+1 problem in GraphQL resolvers with a simple, _no-setup-needed_ API.
 
 If you have thoughts or questions, hit me up in Twitter [@flexdinesh](https://twitter.com/flexdinesh).

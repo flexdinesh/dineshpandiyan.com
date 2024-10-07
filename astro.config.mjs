@@ -29,6 +29,7 @@ if (isBuild) {
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'static',
   server: {
     port: SERVER_PORT,
   },
@@ -40,6 +41,11 @@ export default defineConfig({
       config: {
         applyBaseStyles: false,
       },
-    }),
+    })
   ],
+  vite: {
+    ssr: {
+      external: ['prismjs'],
+    },
+  }
 });
