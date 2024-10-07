@@ -19,6 +19,6 @@ const isActive = isHome || isOtherPages
     { "show": isActive },
     "unset animated-link",
   ]}
-  rel="prefetch"
+  data-astro-prefetch="hover"
   {...props}
 ><slot /></a>

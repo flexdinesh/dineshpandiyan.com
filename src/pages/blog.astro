@@ -58,7 +58,7 @@ const sortedPosts = posts
                   <a
                     href={`/blog/${post.nonNumericSlug}`}
                     class="unset hover:text-text-link"
-                    <!-- rel="prefetch" -->
+                    data-astro-prefetch="hover"
                   >
                     {post.frontmatter.title}
                   </a>
