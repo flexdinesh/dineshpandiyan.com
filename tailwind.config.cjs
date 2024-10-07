@@ -1,3 +1,5 @@
+const fontFallbacks = ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.astro"],
@@ -5,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Inconsolata", "sans-serif"],
-        heading: ["Nunito", "sans-serif"],
+        body: ["Inter", ...fontFallbacks],
+        heading: ["Inter", ...fontFallbacks],
       },
       colors: {
         transparent: "transparent",
@@ -43,10 +45,12 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              "text-decoration": "none",
-              "border-bottom": "1.25px solid rgb(var(--color-text-link))",
-              color: "rgb(var(--color-text-bold))",
+              "text-decoration": "underline",
+              // "border-bottom": "1.75px solid rgb(var(--color-text-link))",
+              // color: "rgb(var(--color-text-bold))",
+              color: "rgb(var(--color-text-link))",
               "&:hover": {
+                "text-decoration": "none",
                 color: "rgb(var(--color-text-link))",
               },
             },
