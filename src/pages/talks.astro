@@ -16,7 +16,7 @@ const sortedTalks = talks
   .sort(
     (a, b) =>
       new Date(b.frontmatter.date).valueOf() -
-      new Date(a.frontmatter.date).valueOf()
+      new Date(a.frontmatter.date).valueOf(),
   );
 ---
 
@@ -27,45 +27,47 @@ const sortedTalks = talks
       {
         sortedTalks.map((talk) => {
           const formattedDate = new Date(
-          talk.frontmatter.date
+            talk.frontmatter.date,
           ).toLocaleDateString("en-us", {
             year: "numeric",
             month: "short",
             day: "numeric",
           });
           return (
-            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
-              <div class="title">
-                {talk.frontmatter.external ? (
-                  <a
-                    href={talk.frontmatter.url}
-                    target="_blank"
-                    class="unset hover:text-text-link"
-                  >
-                    <span>{talk.frontmatter.title}</span>
-                    <span>
-                      <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
-                    </span>
-                    {talk.frontmatter.label ? (
-                      <Label label={talk.frontmatter.label}>
-                        {talk.frontmatter.label}
-                      </Label>
-                    ) : null}
-                  </a>
-                ) : (
-                  <a
-                    href={`/talks/${talk.slug}`}
-                    class="unset hover:text-text-link"
-                    data-astro-prefetch="hover"
-                  >
-                    {talk.frontmatter.title}
-                  </a>
-                )}
-              </div>
-              <div class="text-text-muted text-sm italic pt-1">
-                <time datetime={talk.frontmatter.date.toISOString()}>
-                  {formattedDate}
-                </time>
+            <li class="mb-3 mt-3">
+              <div class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-2 md:gap-2 items-start">
+                <div class="title">
+                  {talk.frontmatter.external ? (
+                    <a
+                      href={talk.frontmatter.url}
+                      target="_blank"
+                      class="unset hover:text-text-link hover:underline"
+                    >
+                      <span>{talk.frontmatter.title}</span>
+                      <span>
+                        <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
+                      </span>
+                      {talk.frontmatter.label ? (
+                        <Label label={talk.frontmatter.label}>
+                          {talk.frontmatter.label}
+                        </Label>
+                      ) : null}
+                    </a>
+                  ) : (
+                    <a
+                      href={`/talks/${talk.slug}`}
+                      class="unset hover:text-text-link hover:underline"
+                      data-astro-prefetch="hover"
+                    >
+                      {talk.frontmatter.title}
+                    </a>
+                  )}
+                </div>
+                <div class="text-text-muted text-sm pt-1">
+                  <time datetime={talk.frontmatter.date.toISOString()}>
+                    {formattedDate}
+                  </time>
+                </div>
               </div>
             </li>
           );

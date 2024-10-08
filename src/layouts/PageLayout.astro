@@ -38,7 +38,7 @@ import Footer from "../components/Footer.astro";
     <main id="main">
       <slot name="main" />
     </main>
-    <Footer />
+    <!-- <Footer /> -->
     <style>
       body {
         display: grid;
@@ -46,7 +46,7 @@ import Footer from "../components/Footer.astro";
           "header"
           "main"
           "footer";
-        grid-template-rows: 5rem minmax(0, 1fr) 5rem;
+        grid-template-rows: 5rem minmax(0, 1fr) 2rem;
         grid-template-columns: minmax(0, 1fr);
       }
       main {

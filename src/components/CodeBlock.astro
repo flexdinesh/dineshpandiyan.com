@@ -7,7 +7,7 @@ const { language, content } = Astro.props;
 <Prism lang={language} code={content} />
 
 <style is:global>
-  /**
+ /**
   https://github.com/PrismJS/prism-themes/blob/master/themes/prism-coldark-dark.css
  * Coldark Theme for Prism.js
  * Theme variation: Dark
@@ -59,7 +59,8 @@ const { language, content } = Astro.props;
 
   :not(pre) > code[class*="language-"],
   pre[class*="language-"] {
-    background: #111b27;
+    /* background: rgb(var(--color-bg-code)); */
+    background: #282a36;
   }
 
   /* Inline code */

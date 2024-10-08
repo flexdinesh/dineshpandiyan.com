@@ -54,34 +54,14 @@ module.exports = {
                 color: "rgb(var(--color-text-link))",
               },
             },
-            ul: {
-              "padding-left": 0,
-              "list-style": "none",
-            },
-            "ul > li": {
-              position: "relative",
-              "padding-left": "1.375rem",
-            },
-            "ul > li::before": {
-              position: "absolute",
-              left: 0,
-              content: '"»"',
-              color: "rgb(var(--color-primary-muted))",
-            },
-            ol: {
-              "padding-left": "1.125rem",
-            },
-            "ol > li::marker": {
-              color: "rgb(var(--color-primary-muted))",
-            },
             "h1, h2, h3, h4, h5": {
               color: "rgb(var(--color-text-heading))",
             },
             "h1, h2": {
-              "font-weight": "600",
+              "font-weight": "800",
             },
             "h3, h4, h5": {
-              "font-weight": "500",
+              "font-weight": "700",
             },
             "code::before": {
               content: "none",
@@ -105,7 +85,7 @@ module.exports = {
               "font-family": "Arial",
               content: "'“'",
               "font-size": "4em",
-              color: "rgb(var(--color-text-link))",
+              color: "rgb(var(--color-text-primary))",
               position: "absolute",
               left: "-10px",
               top: "-10px",

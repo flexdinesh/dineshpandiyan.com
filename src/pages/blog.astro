@@ -13,12 +13,12 @@ const posts = await readAll({
 
 const sortedPosts = posts
   .filter((p) =>
-    import.meta.env.MODE !== "production" ? true : p.frontmatter.draft !== true
+    import.meta.env.MODE !== "production" ? true : p.frontmatter.draft !== true,
   )
   .sort(
     (a, b) =>
       new Date(b.frontmatter.date).valueOf() -
-      new Date(a.frontmatter.date).valueOf()
+      new Date(a.frontmatter.date).valueOf(),
   );
 ---
 
@@ -29,45 +29,47 @@ const sortedPosts = posts
       {
         sortedPosts.map((post) => {
           const formattedDate = new Date(
-            post.frontmatter.date
+            post.frontmatter.date,
           ).toLocaleDateString("en-us", {
             year: "numeric",
             month: "short",
             day: "numeric",
           });
           return (
-            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
-              <div class="title">
-                {post.frontmatter.external ? (
-                  <a
-                    href={post.frontmatter.url}
-                    target="_blank"
-                    class="unset hover:text-text-link"
-                  >
-                    <span>{post.frontmatter.title}</span>
-                    <span>
-                      <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
-                    </span>
-                    {post.frontmatter.label ? (
-                      <Label label={post.frontmatter.label}>
-                        {post.frontmatter.label}
-                      </Label>
-                    ) : null}
-                  </a>
-                ) : (
-                  <a
-                    href={`/blog/${post.nonNumericSlug}`}
-                    class="unset hover:text-text-link"
-                    data-astro-prefetch="hover"
-                  >
-                    {post.frontmatter.title}
-                  </a>
-                )}
-              </div>
-              <div class="text-text-muted text-sm italic pt-1">
-                <time datetime={post.frontmatter.date.toISOString()}>
-                  {formattedDate}
-                </time>
+            <li class="mb-3 mt-3">
+              <div class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-2 md:gap-2 items-start">
+                <div class="title">
+                  {post.frontmatter.external ? (
+                    <a
+                      href={post.frontmatter.url}
+                      target="_blank"
+                      class="unset hover:text-text-link hover:underline"
+                    >
+                      <span>{post.frontmatter.title}</span>
+                      <span>
+                        <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
+                      </span>
+                      {post.frontmatter.label ? (
+                        <Label label={post.frontmatter.label}>
+                          {post.frontmatter.label}
+                        </Label>
+                      ) : null}
+                    </a>
+                  ) : (
+                    <a
+                      href={`/blog/${post.nonNumericSlug}`}
+                      class="unset hover:text-text-link hover:underline"
+                      data-astro-prefetch="hover"
+                    >
+                      {post.frontmatter.title}
+                    </a>
+                  )}
+                </div>
+                <div class="text-text-muted text-sm pt-1">
+                  <time datetime={post.frontmatter.date.toISOString()}>
+                    {formattedDate}
+                  </time>
+                </div>
               </div>
             </li>
           );
