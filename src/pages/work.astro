@@ -16,7 +16,7 @@ const sortedWork = workList
   .sort(
     (a, b) =>
       new Date(b.frontmatter.date).valueOf() -
-      new Date(a.frontmatter.date).valueOf(),
+      new Date(a.frontmatter.date).valueOf()
   );
 ---
 
@@ -27,14 +27,14 @@ const sortedWork = workList
       {
         sortedWork.map((work) => {
           const formattedDate = new Date(
-            work.frontmatter.date,
+            work.frontmatter.date
           ).toLocaleDateString("en-us", {
             year: "numeric",
             month: "short",
             day: "numeric",
           });
           return (
-            <li class="mb-3 mt-3">
+            <li class="mb-2 mt-2">
               <div class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-2 md:gap-2 items-start">
                 <div class="title">
                   <a

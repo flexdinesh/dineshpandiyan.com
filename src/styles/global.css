@@ -7,11 +7,9 @@
     font-family: theme("fontFamily.body");
     background-color: theme("colors.bg.body");
     color: theme("colors.text.body");
-    /* base font-size 1px larger for better visibility */
-    font-size: 1.125rem;
     line-height: 28px;
     scroll-behavior: smooth;
-    /* transition: background-color 0.3s ease; */
+    transition: background-color 0.3s ease;
     scrollbar-gutter: stable;
   }
 
@@ -26,6 +24,7 @@
 }
 
 @layer components {
+
   /* ------ GLOBAL STYLES - START ------ */
   strong {
     font-weight: 600;

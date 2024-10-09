@@ -30,30 +30,30 @@ const featuredItems = [
   ...notesList.map((p) => ({ ...p, path: "notes" })),
 ]
   .filter((p) =>
-    import.meta.env.MODE !== "production" ? true : p.frontmatter.draft !== true,
+    import.meta.env.MODE !== "production" ? true : p.frontmatter.draft !== true
   )
   .filter((p) => p.frontmatter.featured === true)
   .sort(
     (a, b) =>
       new Date(b.frontmatter.date).valueOf() -
-      new Date(a.frontmatter.date).valueOf(),
+      new Date(a.frontmatter.date).valueOf()
   );
 ---
 
 <section class="pt-2 pb-2">
-  <h2 class="font-bold text-xl md:text-2xl pb-4 text-text-heading">Latest</h2>
+  <h2 class="font-bold text-xl md:text-2xl pb-2 text-text-heading">Latest</h2>
   <ul class="list-none">
     {
       featuredItems.map((item) => {
         const formattedDate = new Date(
-          item.frontmatter.date,
+          item.frontmatter.date
         ).toLocaleDateString("en-us", {
           year: "numeric",
           month: "short",
           day: "numeric",
         });
         return (
-          <li class="mb-3 mt-3">
+          <li class="mb-2 mt-2">
             <div class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-2 md:gap-2 items-start">
               <div class="title">
                 {item.frontmatter?.external ? (
