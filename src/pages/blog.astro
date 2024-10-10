@@ -7,74 +7,76 @@ import Label from "../components/Label.astro";
 import { SITE_TITLE } from "../config";
 
 const posts = await readAll({
-  directory: "blog",
-  frontmatterSchema: blog,
+	directory: "blog",
+	frontmatterSchema: blog,
 });
 
 const sortedPosts = posts
-  .filter((p) =>
-    import.meta.env.MODE !== "production" ? true : p.frontmatter.draft !== true
-  )
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.date).valueOf() -
-      new Date(a.frontmatter.date).valueOf()
-  );
+	.filter((p) =>
+		import.meta.env.MODE !== "production" ? true : p.frontmatter.draft !== true,
+	)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.date).valueOf() -
+			new Date(a.frontmatter.date).valueOf(),
+	);
 ---
 
 <PageLayout>
-  <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
-  <section slot="main" class="pt-2">
-    <ul>
-      {
-        sortedPosts.map((post) => {
-          const formattedDate = new Date(
-            post.frontmatter.date
-          ).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          });
-          return (
-            <li class="mb-2 mt-2">
-              <div class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-2 md:gap-2 items-start">
-                <div class="title">
-                  {post.frontmatter.external ? (
-                    <a
-                      href={post.frontmatter.url}
-                      target="_blank"
-                      class="unset hover:text-text-link hover:underline"
-                    >
-                      <span>{post.frontmatter.title}</span>
-                      <span>
-                        <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
-                      </span>
-                      {post.frontmatter.label ? (
-                        <Label label={post.frontmatter.label}>
-                          {post.frontmatter.label}
-                        </Label>
-                      ) : null}
-                    </a>
-                  ) : (
-                    <a
-                      href={`/blog/${post.nonNumericSlug}`}
-                      class="unset hover:text-text-link hover:underline"
-                      data-astro-prefetch="hover"
-                    >
-                      {post.frontmatter.title}
-                    </a>
-                  )}
-                </div>
-                <div class="text-text-muted text-sm pt-1">
-                  <time datetime={post.frontmatter.date.toISOString()}>
-                    {formattedDate}
-                  </time>
-                </div>
-              </div>
-            </li>
-          );
-        })
-      }
-    </ul>
-  </section>
+	<PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
+	<section slot="main" class="pt-2">
+		<ul>
+			{
+				sortedPosts.map((post) => {
+					const formattedDate = new Date(
+						post.frontmatter.date,
+					).toLocaleDateString("en-us", {
+						year: "numeric",
+						month: "short",
+						day: "numeric",
+					});
+					return (
+						<li class="mb-2 mt-2">
+							<div class="grid grid-cols-[1fr]">
+								<div class="title">
+									{post.frontmatter.external ? (
+										<a
+											href={post.frontmatter.url}
+											target="_blank"
+											class="unset group hover:text-text-link"
+										>
+											<span class="group-hover:underline">{post.frontmatter.title}</span>
+											<span class="text-sm text-text-muted">
+												({new URL(post.frontmatter.url).host.replace("www.", "")})
+											</span>
+											{/* {post.frontmatter.label ? (
+												<Label label={post.frontmatter.label}>
+													{post.frontmatter.label}
+												</Label>
+											) : null} */}
+										</a>
+									) : (
+										<a
+											href={`/blog/${post.nonNumericSlug}`}
+											class="unset hover:text-text-link"
+											data-astro-prefetch="hover"
+										>
+											<span class="hover:underline">
+												{post.frontmatter.title}
+											</span>
+										</a>
+									)}
+								</div>
+								<div class="text-text-muted text-sm">
+									<time datetime={post.frontmatter.date.toISOString()}>
+										{formattedDate}
+									</time>
+								</div>
+							</div>
+						</li>
+					);
+				})
+			}
+		</ul>
+	</section>
 </PageLayout>

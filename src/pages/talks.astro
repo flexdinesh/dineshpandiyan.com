@@ -7,72 +7,74 @@ import Label from "../components/Label.astro";
 import { SITE_TITLE } from "../config";
 
 const talks = await readAll({
-  directory: "talks",
-  frontmatterSchema: talk,
+	directory: "talks",
+	frontmatterSchema: talk,
 });
 
 const sortedTalks = talks
-  .filter((t) => t.frontmatter.draft !== true)
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.date).valueOf() -
-      new Date(a.frontmatter.date).valueOf()
-  );
+	.filter((t) => t.frontmatter.draft !== true)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.date).valueOf() -
+			new Date(a.frontmatter.date).valueOf(),
+	);
 ---
 
 <PageLayout>
-  <PageMeta title={`Talks | ${SITE_TITLE}`} slot="meta" />
-  <section slot="main" class="pt-2">
-    <ul>
-      {
-        sortedTalks.map((talk) => {
-          const formattedDate = new Date(
-            talk.frontmatter.date
-          ).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          });
-          return (
-            <li class="mb-2 mt-2">
-              <div class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-2 md:gap-2 items-start">
-                <div class="title">
-                  {talk.frontmatter.external ? (
-                    <a
-                      href={talk.frontmatter.url}
-                      target="_blank"
-                      class="unset hover:text-text-link hover:underline"
-                    >
-                      <span>{talk.frontmatter.title}</span>
-                      <span>
-                        <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
-                      </span>
-                      {talk.frontmatter.label ? (
-                        <Label label={talk.frontmatter.label}>
-                          {talk.frontmatter.label}
-                        </Label>
-                      ) : null}
-                    </a>
-                  ) : (
-                    <a
-                      href={`/talks/${talk.slug}`}
-                      class="unset hover:text-text-link hover:underline"
-                      data-astro-prefetch="hover"
-                    >
-                      {talk.frontmatter.title}
-                    </a>
-                  )}
-                </div>
-                <div class="text-text-muted text-sm pt-1">
-                  <time datetime={talk.frontmatter.date.toISOString()}>
-                    {formattedDate}
-                  </time>
-                </div>
-              </div>
-            </li>
-          );
-        })
-      }
-    </ul>
-  </section>
+	<PageMeta title={`Talks | ${SITE_TITLE}`} slot="meta" />
+	<section slot="main" class="pt-2">
+		<ul>
+			{
+				sortedTalks.map((talk) => {
+					const formattedDate = new Date(
+						talk.frontmatter.date,
+					).toLocaleDateString("en-us", {
+						year: "numeric",
+						month: "short",
+						day: "numeric",
+					});
+					return (
+						<li class="mb-2 mt-2">
+							<div class="grid grid-cols-[1fr]">
+								<div class="title">
+									{talk.frontmatter.external ? (
+										<a
+											href={talk.frontmatter.url}
+											target="_blank"
+											class="unset group hover:text-text-link"
+										>
+											<span class="group-hover:underline">{talk.frontmatter.title}</span>
+											<span class="text-sm text-text-muted">
+												({new URL(talk.frontmatter.url).host.replace("www.", "")})
+											</span>
+											{/* {talk.frontmatter.label ? (
+												<Label label={talk.frontmatter.label}>
+													{talk.frontmatter.label}
+												</Label>
+											) : null} */}
+										</a>
+									) : (
+										<a
+											href={`/talks/${talk.slug}`}
+											class="unset hover:text-text-link"
+											data-astro-prefetch="hover"
+										>
+											<span class="hover:underline">
+												{talk.frontmatter.title}
+											</span>
+										</a>
+									)}
+								</div>
+								<div class="text-text-muted text-sm">
+									<time datetime={talk.frontmatter.date.toISOString()}>
+										{formattedDate}
+									</time>
+								</div>
+							</div>
+						</li>
+					);
+				})
+			}
+		</ul>
+	</section>
 </PageLayout>

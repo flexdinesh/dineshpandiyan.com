@@ -44,9 +44,9 @@
   }
   function updateStorageTheme(mode: "light" | "dark") {
     if (mode === "dark") {
-      sessionStorage.setItem("theme", "dark");
+      localStorage.setItem("theme", "dark");
     } else {
-      sessionStorage.setItem("theme", "light");
+      localStorage.setItem("theme", "light");
     }
   }
   class ModeToggle extends HTMLElement {

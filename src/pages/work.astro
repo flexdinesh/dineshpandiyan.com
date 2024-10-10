@@ -7,63 +7,63 @@ import Label from "../components/Label.astro";
 import { SITE_TITLE } from "../config";
 
 const workList = await readAll({
-  directory: "work",
-  frontmatterSchema: work,
+	directory: "work",
+	frontmatterSchema: work,
 });
 
 const sortedWork = workList
-  .filter((p) => p.frontmatter.draft !== true)
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.date).valueOf() -
-      new Date(a.frontmatter.date).valueOf()
-  );
+	.filter((p) => p.frontmatter.draft !== true)
+	.sort(
+		(a, b) =>
+			new Date(b.frontmatter.date).valueOf() -
+			new Date(a.frontmatter.date).valueOf(),
+	);
 ---
 
 <PageLayout>
-  <PageMeta title={`Work | ${SITE_TITLE}`} slot="meta" />
-  <section slot="main" class="pt-2">
-    <ul>
-      {
-        sortedWork.map((work) => {
-          const formattedDate = new Date(
-            work.frontmatter.date
-          ).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          });
-          return (
-            <li class="mb-2 mt-2">
-              <div class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-2 md:gap-2 items-start">
-                <div class="title">
-                  <a
-                    href={work.frontmatter.url}
-                    target="_blank"
-                    class="unset hover:text-text-link hover:underline"
-                    data-astro-prefetch="hover"
-                  >
-                    <span>{work.frontmatter.title}</span>
-                    <span>
-                      <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
-                    </span>
-                    {work.frontmatter.label ? (
-                      <Label label={work.frontmatter.label}>
-                        {work.frontmatter.label}
-                      </Label>
-                    ) : null}
-                  </a>
-                </div>
-                <div class="text-text-muted text-sm pt-1">
-                  <time datetime={work.frontmatter.date.toISOString()}>
-                    {formattedDate}
-                  </time>
-                </div>
-              </div>
-            </li>
-          );
-        })
-      }
-    </ul>
-  </section>
+	<PageMeta title={`Work | ${SITE_TITLE}`} slot="meta" />
+	<section slot="main" class="pt-2">
+		<ul>
+			{
+				sortedWork.map((work) => {
+					const formattedDate = new Date(
+						work.frontmatter.date,
+					).toLocaleDateString("en-us", {
+						year: "numeric",
+						month: "short",
+						day: "numeric",
+					});
+					return (
+						<li class="mb-2 mt-2">
+							<div class="grid grid-cols-[1fr]">
+								<div class="title">
+									<a
+										href={work.frontmatter.url}
+										target="_blank"
+										class="unset group hover:text-text-link"
+										data-astro-prefetch="hover"
+									>
+										<span class="group-hover:underline">{work.frontmatter.title}</span>
+										<span class="text-sm text-text-muted">
+											({new URL(work.frontmatter.url).host.replace("www.", "")})
+										</span>
+										{/* {work.frontmatter.label ? (
+											<Label label={work.frontmatter.label}>
+												{work.frontmatter.label}
+											</Label>
+										) : null} */}
+									</a>
+								</div>
+								<div class="text-text-muted text-sm">
+									<time datetime={work.frontmatter.date.toISOString()}>
+										{formattedDate}
+									</time>
+								</div>
+							</div>
+						</li>
+					);
+				})
+			}
+		</ul>
+	</section>
 </PageLayout>

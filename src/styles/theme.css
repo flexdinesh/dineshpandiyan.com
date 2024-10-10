@@ -14,8 +14,8 @@
   --color-text-heading: 23 23 23;
   /* tailwind gray-900 #111827 */
   --color-text-bold: 17 24 39;
-  /* tailwind gray-500 */
-  --color-text-muted: 27 27 27;
+  /* #777 */
+  --color-text-muted: 119 119 119;
   /* #0074de */
   --color-text-link: 0 116 222;
 
@@ -51,8 +51,8 @@
   --color-text-heading: 255 255 255;
   /* white */
   --color-text-bold: 255 255 255;
-  /* tailwind gray-400 */
-  --color-text-muted: 255 255 255;
+  /* #777 */
+  --color-text-muted: 119 119 119;
   /* mdn link */
   --color-text-link: 140 180 255;
   /* black */

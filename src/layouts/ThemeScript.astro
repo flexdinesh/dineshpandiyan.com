@@ -11,7 +11,7 @@
       const isSystemColorSchemeDark = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;
-      const storageTheme = sessionStorage.getItem("theme");
+      const storageTheme = localStorage.getItem("theme");
       if (!storageTheme && isSystemColorSchemeDark) {
         document.documentElement.classList.add("dark");
         document.head.children.namedItem("theme-color").content = "#1b1b1b";
