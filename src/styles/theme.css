@@ -1,5 +1,6 @@
 /* light theme */
 .theme-sleek {
+  /* #1b1b1b */
   --color-primary-main: 23 23 23;
   /* --color-primary-main: 245 158 11; */
   --color-label-blue: 186 230 253;
@@ -12,8 +13,8 @@
   --color-text-body: 23 23 23;
   /* #1b1b1b */
   --color-text-heading: 23 23 23;
-  /* tailwind gray-900 #111827 */
-  --color-text-bold: 17 24 39;
+  /* #1b1b1b */
+  --color-text-bold: 23 23 23;
   /* #777 */
   --color-text-muted: 119 119 119;
   /* #0074de */
@@ -37,8 +38,9 @@
 
 /* dark theme */
 .theme-sleek.dark {
-  /* tailwind cyan-500 */
-  --color-primary-main: 34 211 238;
+  /* mdn body white */
+  --color-primary-main: 255 255 255;
+  /* --color-primary-main: 34 211 238; */
   --color-label-blue: 3 105 161;
   --color-label-gray: 51 65 85;
   --color-label-yellow: 161 98 7;

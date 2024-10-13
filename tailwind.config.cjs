@@ -48,8 +48,6 @@ module.exports = {
           css: {
             a: {
               "text-decoration": "underline",
-              // "border-bottom": "1.75px solid rgb(var(--color-text-link))",
-              // color: "rgb(var(--color-text-bold))",
               color: "rgb(var(--color-text-link))",
               "&:hover": {
                 "text-decoration": "none",
@@ -71,36 +69,6 @@ module.exports = {
             "code::after": {
               content: "none",
             },
-            blockquote: {
-              border: "none",
-              position: "relative",
-              width: "96%",
-              margin: "0 auto",
-              color: "rgb(var(--color-text-muted))",
-              "font-size": "1.125em",
-              "padding-top": "1.5rem",
-              "padding-bottom": "0.5rem",
-              "padding-left": "1.5rem",
-              "padding-right": "1.5rem",
-            },
-            "blockquote::before": {
-              "font-family": "Arial",
-              content: "'“'",
-              "font-size": "4em",
-              color: "rgb(var(--color-text-primary))",
-              position: "absolute",
-              left: "-10px",
-              top: "-10px",
-            },
-            "blockquote::after": {
-              content: "",
-            },
-            "blockquote p:first-of-type::before": {
-              content: "",
-            },
-            "blockquote p:last-of-type::after": {
-              content: "",
-            },
           },
         },
         sleek: {
@@ -113,7 +81,7 @@ module.exports = {
             "--tw-prose-counters": "rgb(var(--color-primary-muted))",
             "--tw-prose-bullets": "rgb(var(--color-primary-muted))",
             "--tw-prose-hr": "rgb(var(--color-primary-muted))",
-            "--tw-prose-quotes": "rgb(var(--color-text-muted))",
+            "--tw-prose-quotes": "rgb(var(--color-text-body))",
             "--tw-prose-quote-borders": "rgb(var(--color-primary-main))",
             "--tw-prose-captions": "rgb(var(--color-primary-heading))",
             "--tw-prose-quote-captions": "rgb(var(--color-primary-heading))",
