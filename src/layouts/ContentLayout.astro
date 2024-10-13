@@ -7,7 +7,7 @@
 import "../styles/theme.css";
 import "../styles/global.css";
 
-import GoogleFont from "./GoogleFont.astro";
+// import GoogleFont from "./GoogleFont.astro";
 import FontAwesome from "./FontAwesome.astro";
 import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
@@ -37,7 +37,7 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
     <Favicon />
     <slot name="meta" />
     <ThemeScript />
-    <GoogleFont />
+    <!-- <GoogleFont /> -->
     <FontAwesome />
   </head>
 

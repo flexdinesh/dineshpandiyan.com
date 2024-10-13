@@ -1,4 +1,4 @@
-const fontFallbacks = ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
+// const fontFallbacks = ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"]
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,8 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Inter", ...fontFallbacks],
-        heading: ["Inter", ...fontFallbacks],
+        body: ["Verdana, sans-serif"],
+        heading: ["Verdana, sans-serif"],
+        // body: ["Inter", ...fontFallbacks],
+        // heading: ["Inter", ...fontFallbacks],
       },
       colors: {
         transparent: "transparent",
