@@ -43,9 +43,11 @@ const sortedWork = workList
 										class="unset group hover:text-text-link"
 										data-astro-prefetch="hover"
 									>
-										<span class="group-hover:underline">{work.frontmatter.title}</span>
+										<span class="group-hover:underline">
+											{work.frontmatter.title}
+										</span>
 										<span class="text-sm text-text-muted">
-											({new URL(work.frontmatter.url).host.replace("www.", "")})
+											{`(${new URL(work.frontmatter.url).host.replace("www.", "")})`}
 										</span>
 										{/* {work.frontmatter.label ? (
 											<Label label={work.frontmatter.label}>

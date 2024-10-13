@@ -62,9 +62,11 @@ const featuredItems = [
 										target="_blank"
 										class="unset group hover:text-text-link"
 									>
-										<span class="group-hover:underline">{item.frontmatter.title}</span>
+										<span class="group-hover:underline">
+											{item.frontmatter.title}
+										</span>
 										<span class="text-sm text-text-muted">
-											({new URL(item.frontmatter.url).host.replace("www.", "")})
+											{`(${new URL(item.frontmatter.url).host.replace("www.", "")})`}
 										</span>
 										{/* {item.frontmatter.label ? (
 											<Label label={item.frontmatter.label}>
