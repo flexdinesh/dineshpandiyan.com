@@ -4,7 +4,7 @@ external: false
 title: Arch Linux with Hyprland is very good
 description: I now run Arch Linux with Hyprland and I love it
 date: 2024-10-29
-ogImagePath: /images/blog/arch-linux-hyprland/arch-hypr.png
+ogImagePath: /images/blog/arch-linux-hyprland/arch-hypr.pnghttps://dineshpandiyan.com/blog/arch-linux-hyprland/
 ---
 
 ![Arch Linux with Hyprland](/images/blog/arch-linux-hyprland/arch-hypr.png)
@@ -24,7 +24,7 @@ I started from scratch, and here's my [ricing](https://excaliburzero.gitbooks.io
 
 ## Arch Linux
 
-I was already running Pop!_OS on my System76 Lemur Pro. It's an ubuntu based distro. It was okay. But the GNOME based tiling didn't really work for me. I'm used to [magnet workspace organizer](https://magnet.crowdcafe.com/) in macOS. Compared to it, Pop!_OS was disappointing. Additionally, the tools I want to use were often not the latest version in the `apt` package manager. Often, I had to compile tools on my own from GitHub repos which is cumbersome. I wanted to be on the bleeding edge without much extra effort. So natually, I wanted to go with Arch Linux.
+I was already running Pop!_OS on my System76 Lemur Pro. It's an ubuntu based distro. It was okay. But the GNOME based tiling didn't really work for me. I'm used to [magnet workspace organizer](https://magnet.crowdcafe.com/) in macOS. Compared to it, Pop!_OS was disappointing. Additionally, the tools I wanted to use were often not the latest version in the `apt` package manager. Often, I had to compile tools on my own from GitHub repos which is cumbersome. I wanted to be on the bleeding edge without much extra effort. So natually, I wanted to go with Arch Linux.
 
 The last time I installed Arch Linux, it was on an old desktop 10 years ago. Just the installation was a daunting process back then. It's a whole different story now. I used [archinstall](https://wiki.archlinux.org/title/Archinstall) which automated most of the installation. I just watched a YouTube video, flashed a USB drive with the latest ISO and had Arch up and running in no time.
 
@@ -38,7 +38,7 @@ I like Hyprland.
 - The config changes are hot reloaded. I can play around with the config to get a feel for things instantly without having to reboot the session.
 - A rich ecosystem of hypr tools.
 
-Here's a screenshot of window tiles: two terminal windows runing different CLI tools and Obsidian notes on the left. The 2nd workspace is reserved from browser windows.
+Here's a screenshot of window tiles: two terminal windows runing different CLI tools and Obsidian notes on the left. The 2nd workspace is reserved for browser windows.
 
 ![Tiling in Hyprland](/images/blog/arch-linux-hyprland/tiling.png)
 
