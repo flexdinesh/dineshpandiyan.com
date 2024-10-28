@@ -3,7 +3,7 @@ featured: true
 external: false
 title: Arch Linux with Hyprland is very good
 description: I now run Arch Linux with Hyprland and I love it
-date: 2024-10-28
+date: 2024-10-29
 ---
 
 ![Arch Linux with Hyprland](/images/blog/arch-linux-hyprland/arch-hypr.png)
