@@ -24,7 +24,7 @@ I started from scratch, and here's my [ricing](https://excaliburzero.gitbooks.io
 
 ## Arch Linux
 
-I was already running Pop!\_OS on my System76 Lemur Pro. It's an ubuntu based distro. It was okay. But the GNOME based tiling didn't really work for me. I'm used to [magnet workspace organizer](https://magnet.crowdcafe.com/) in macOS. Compared to it, Pop!\_OS was disappointing. Additionally, the tools I wanted to use were often not the latest version in the `apt` package manager. Often, I had to compile tools on my own from GitHub repos which is cumbersome. I wanted to be on the bleeding edge without much extra effort. So natually, I wanted to go with Arch Linux.
+I was already running Pop!\_OS on my System76 Lemur Pro. It's an ubuntu based distro. It was okay. But the GNOME based tiling didn't really work for me. I'm used to [magnet workspace organizer](https://magnet.crowdcafe.com/) in macOS. Compared to it, Pop!\_OS was disappointing. Additionally, the tools I wanted to use were often not the latest version in the `apt` package manager. Often, I had to compile tools on my own from GitHub repos which is cumbersome. I wanted to be on the bleeding edge without much extra effort. So naturally, I wanted to go with Arch Linux.
 
 The last time I installed Arch Linux, it was on an old desktop 10 years ago. Just the installation was a daunting process back then. It's a whole different story now. I used [archinstall](https://wiki.archlinux.org/title/Archinstall) which automated most of the installation. I just watched a YouTube video, flashed a USB drive with the latest ISO and had Arch up and running in no time.
 
@@ -48,7 +48,7 @@ I chose [waybar](https://github.com/Alexays/Waybar) as the status bar. There's n
 
 ## Wofi
 
-I chose [wofi](https://hg.sr.ht/~scoopta/wofi) as the status bar. Similar to waybar, there's no specific reason for picking this other than that the Hyprland examples recommended it and I went with it. It's a launcher, other tools work well with it and it can be styled. I have setup emoji picker and clipboard manager to work with wofi.
+I chose [wofi](https://hg.sr.ht/~scoopta/wofi) as the launcher. Similar to waybar, there's no specific reason for picking this other than that the Hyprland examples recommended it and I went with it. It's a launcher, other tools work well with it and it can be styled. I have setup emoji picker and clipboard manager to work with wofi.
 
 Here's a screenshot of the wofi launcher. It is mapped to `Super + Space`.
 
