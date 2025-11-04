@@ -12,7 +12,7 @@ module.exports = {
         // body: ["Inter", ...fontFallbacks],
         // heading: ["Inter", ...fontFallbacks],
       },
-      colors: {
+      xxcolors: {
         transparent: "transparent",
         current: "currentColor",
         primary: {

@@ -1,74 +1,72 @@
 /* light theme */
 .theme-sleek {
   /* #1b1b1b */
-  --color-primary-main: 23 23 23;
-  /* --color-primary-main: 245 158 11; */
-  --color-label-blue: 186 230 253;
-  --color-label-gray: 226 232 240;
-  --color-label-yellow: 253 230 138;
-  --color-label-orange: 254 215 170;
-  --color-label-red: 254 205 211;
+  --color-primary-main: oklch(0.16 0 0);
+  --color-label-blue: oklch(0.88 0.05 230);
+  --color-label-gray: oklch(0.92 0.01 250);
+  --color-label-yellow: oklch(0.92 0.10 95);
+  --color-label-orange: oklch(0.88 0.08 65);
+  --color-label-red: oklch(0.86 0.08 10);
 
   /* #1b1b1b */
-  --color-text-body: 23 23 23;
+  --color-text-body: oklch(0.16 0 0);
   /* #1b1b1b */
-  --color-text-heading: 23 23 23;
+  --color-text-heading: oklch(0.16 0 0);
   /* #1b1b1b */
-  --color-text-bold: 23 23 23;
+  --color-text-bold: oklch(0.16 0 0);
   /* #777 */
-  --color-text-muted: 119 119 119;
+  --color-text-muted: oklch(0.55 0 0);
   /* #0074de */
-  --color-text-link: 0 116 222;
+  --color-text-link: oklch(0.55 0.17 250);
 
   /* black */
-  --color-text-code: 0 0 0;
+  --color-text-code: oklch(0 0 0);
   /* black */
-  --color-text-selection: 0 0 0;
+  --color-text-selection: oklch(0 0 0);
 
   /* white */
-  --color-bg-body: 255 255 255;
+  --color-bg-body: oklch(1 0 0);
   /* next.js blog code */
-  --color-bg-code: 242 242 242;
+  --color-bg-code: oklch(0.96 0 0);
   /* #fef08a */
-  --color-bg-selection: 254 240 138;
+  --color-bg-selection: oklch(0.94 0.11 100);
 
   /* next.js blog code */
-  --color-border-code: 235 235 235;
+  --color-border-code: oklch(0.93 0 0);
 }
 
 /* dark theme */
 .theme-sleek.dark {
-  /* mdn body white */
-  --color-primary-main: 255 255 255;
-  /* --color-primary-main: 34 211 238; */
-  --color-label-blue: 3 105 161;
-  --color-label-gray: 51 65 85;
-  --color-label-yellow: 161 98 7;
-  --color-label-orange: 194 65 12;
-  --color-label-red: 190 18 60;
+  /* softer white for primary */
+  --color-primary-main: oklch(0.92 0 0);
+  --color-label-blue: oklch(0.55 0.11 235);
+  --color-label-gray: oklch(0.40 0.03 250);
+  --color-label-yellow: oklch(0.60 0.11 65);
+  --color-label-orange: oklch(0.60 0.15 40);
+  --color-label-red: oklch(0.58 0.20 10);
 
-  /* mdn body white */
-  --color-text-body: 255 255 255;
-  /* white */
-  --color-text-heading: 255 255 255;
-  /* white */
-  --color-text-bold: 255 255 255;
-  /* #777 */
-  --color-text-muted: 119 119 119;
-  /* mdn link */
-  --color-text-link: 140 180 255;
-  /* black */
-  --color-text-code: 255 255 255;
-  /* black */
-  --color-text-selection: 0 0 0;
+  /* softer off-white for better readability */
+  --color-text-body: oklch(0.92 0 0);
+  /* slightly brighter for headings */
+  --color-text-heading: oklch(0.95 0 0);
+  /* same as body */
+  --color-text-bold: oklch(0.92 0 0);
+  /* lighter muted text for dark mode */
+  --color-text-muted: oklch(0.65 0 0);
+  /* slightly brighter link */
+  --color-text-link: oklch(0.78 0.13 255);
+  /* softer code text */
+  --color-text-code: oklch(0.90 0 0);
+  /* keep black for selection text */
+  --color-text-selection: oklch(0 0 0);
 
-  /* mdn bg #1b1b1b */
-  --color-bg-body: 27 27 27;
-  /* #343434 */
-  --color-bg-code: 52 52 52;
-  /* #67e8f9 */
-  --color-bg-selection: 103 232 249;
+  /* dark background */
+  --color-bg-body: oklch(0.25 0 0);
+  /* slightly lighter for code blocks */
+  --color-bg-code: oklch(0.30 0 0);
+  /* muted cyan for selection */
+  --color-bg-selection: oklch(0.70 0.10 200);
 
-  /* yellow-100 */
-  --color-border-code: 254 243 199;
+  /* subtle border for dark mode */
+  --color-border-code: oklch(0.40 0 0);
 }
