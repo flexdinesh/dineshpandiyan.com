@@ -1,0 +1,55 @@
+{{ define "main" }}
+<div class="home-page">
+  <!-- Hero/Intro Section -->
+  <section class="hero-section">
+    <div class="hero">
+      <h1 class="hero-title">
+        Hello.
+      </h1>
+      <p>
+        I wear many hats. A dev most of the time. I make the servers go fast.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Content -->
+  <section class="featured-section">
+    <h2 class="section-title">Latest</h2>
+
+    {{ $featured := where .Site.RegularPages ".Params.featured" true }}
+    {{ if $featured }}
+      <ul class="list-none featured-list unset">
+        {{ range $featured }}
+          <li class="featured-item">
+            <div class="grid grid-cols-[1fr]">
+              <div class="title">
+                {{ if .Params.external }}
+                  <a href="{{ .Params.url }}" target="_blank" rel="noopener" class="unset group hover:text-text-link">
+                    <span class="group-hover:underline">{{ .Title }}</span>
+                    <span class="external-icon" aria-label="External link">↗</span>
+                    {{ if .Params.label }}
+                    <span class="ml-2 text-xs px-2 py-1 rounded bg-text-heading/10 dark:bg-white/10">{{ .Params.label }}</span>
+                    {{ end }}
+                  </a>
+                {{ else }}
+                  <a href="{{ .RelPermalink }}" class="unset hover:text-text-link">
+                    <span class="hover:underline">{{ .Title }}</span>
+                  </a>
+                {{ end }}
+              </div>
+              <div class="text-text-muted text-sm">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                  {{ .Date.Format "Jan 2, 2006" }}
+                </time>
+              </div>
+            </div>
+          </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <p class="text-text-muted">No featured content yet.</p>
+    {{ end }}
+  </section>
+
+</div>
+{{ end }}

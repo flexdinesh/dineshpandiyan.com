@@ -1,0 +1,24 @@
+{{- $src := .Destination -}}
+{{- $alt := .Text -}}
+{{- $title := .Title -}}
+
+{{- if strings.HasPrefix $src "/" -}}
+  {{- $imagePath := strings.TrimPrefix "/images/" $src -}}
+  {{- $resource := resources.Get (printf "images/%s" $imagePath) -}}
+
+  {{- if $resource -}}
+    {{- $webp := $resource.Resize "1200x webp q85" -}}
+    <img src="{{ $webp.RelPermalink }}"
+         alt="{{ $alt }}"
+         {{- with $title }} title="{{ . }}"{{ end }}
+         loading="lazy"
+         width="{{ $webp.Width }}"
+         height="{{ $webp.Height }}">
+  {{- else -}}
+    {{- /* Fallback if resource not found */ -}}
+    <img src="{{ $src }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}>
+  {{- end -}}
+{{- else -}}
+  {{- /* External images */ -}}
+  <img src="{{ $src }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }}>
+{{- end -}}

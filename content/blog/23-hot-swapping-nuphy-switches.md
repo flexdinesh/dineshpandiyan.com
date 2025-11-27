@@ -1,10 +1,12 @@
 ---
-featured: true
-external: false
 title: Hot Swapping Nuphy Switches with Gateron Blue Switches
+slug: hot-swapping-nuphy-switches
 description: I swapped the NuPhy Gateron Lemon switches in my NuPhy Halo75 v2 keyboard with Gateron G Pro 2.0 Blue switches
 date: 2025-04-22
-ogImagePath: /images/blog/nuphy-switches/1.jpeg
+params:
+  featured: true
+  external: false
+  ogImagePath: /images/blog/nuphy-switches/1.jpeg
 ---
 
 ![NuPhy Halo75 V2 and Keychron K2 Pro](/images/blog/nuphy-switches/1.jpeg)

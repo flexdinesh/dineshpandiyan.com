@@ -1,7 +1,9 @@
 ---
-featured: true
-label: deprecated
 title: Statically generate blog websites with Keystone and Next.js
 date: 2022-10-09
-url: https://github.com/flexdinesh/keystone-static-blog
+params:
+  featured: true
+  external: true
+  label: deprecated
+  url: https://github.com/flexdinesh/keystone-static-blog
 ---

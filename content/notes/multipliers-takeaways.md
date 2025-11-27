@@ -1,9 +1,10 @@
 ---
-featured: true
-external: false
-label: thoughts
 title: Takeaways from the book Multipliers by Liz Wiseman
 date: 2023-05-23
+params:
+  featured: true
+  external: false
+  label: thoughts
 ---
 
 

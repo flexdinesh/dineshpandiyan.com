@@ -1,0 +1,61 @@
+baseURL = 'https://dineshpandiyan.com'
+title = 'Dinesh Pandiyan'
+languageCode = 'en-us'
+
+[server]
+  port = 1313
+
+# Ignore errors for external URLs in frontmatter
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+
+[params]
+  description = 'I write about modern web, servers and performance.'
+  author = 'Dinesh Pandiyan'
+  twitterHandle = '@flexdinesh'
+  ogImagePath = '/images/og.png?v=2'
+  ogImageAlt = 'My fancy website'
+  ogImageWidth = '1200'
+  ogImageHeight = '630'
+
+# Enable sitemap generation (default: true)
+# Hugo auto-generates sitemap.xml
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+# RSS feed configuration
+[outputs]
+  home = ['HTML']
+  section = ['HTML']
+  taxonomy = ['HTML']
+  term = ['HTML']
+
+[outputFormats.RSS]
+  mediatype = "application/rss+xml"
+  baseName = "feed"  # Generates feed.xml instead of index.xml
+
+# Number of items in RSS feed
+rssLimit = 100
+
+# Security configuration
+[security]
+  enableInlineShortcodes = true
+  [security.exec]
+    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+
+# Goldmark markdown processor (default)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+  # Chroma syntax highlighting
+  [markup.highlight]
+    style = 'monokai'
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = false

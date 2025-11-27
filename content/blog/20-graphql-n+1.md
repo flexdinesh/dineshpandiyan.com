@@ -1,10 +1,12 @@
 ---
-featured: true
-external: false
 title: Visualizing the N+1 Problem in GraphQL
+slug: graphql-n+1
 description: An overview of the N+1 data fetching problem in GraphQL and the request batching solution to solve it.
 date: 2023-04-10
-ogImagePath: /images/blog/graphql-n+1/cover.png
+params:
+  featured: true
+  external: false
+  ogImagePath: /images/blog/graphql-n+1/cover.png
 ---
 
 ![Visualizing the N+1 Problem in GraphQL](/images/blog/graphql-n+1/cover.png)

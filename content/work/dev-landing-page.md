@@ -1,6 +1,8 @@
 ---
-label: github
 title: A minimal landing page for developers
 date: 2018-04-06
-url: https://github.com/flexdinesh/dev-landing-page
+params:
+  label: github
+  external: true
+  url: https://github.com/flexdinesh/dev-landing-page
 ---

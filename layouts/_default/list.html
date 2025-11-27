@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="pt-2">
+  {{ if .Content }}
+  <div class="section-intro mb-8">
+    {{ .Content }}
+  </div>
+  {{ end }}
+
+  {{ $pages := .Pages }}
+  {{ $featured := where $pages ".Params.featured" true }}
+
+  <section class="items">
+    <ul class="list-none unset">
+      {{ range $pages }}
+      <li class="mb-2 mt-2">
+        <div class="grid grid-cols-[1fr]">
+          <div class="title">
+            {{ if .Params.external }}
+            <a href="{{ .Params.url }}" target="_blank" rel="noopener noreferrer" class="unset group hover:text-text-link">
+              <span class="group-hover:underline">{{ .Title }}</span>
+              <span class="external-icon" aria-label="External link">↗</span>
+              {{ if .Params.label }}
+              <span class="ml-2 text-xs px-2 py-1 rounded bg-text-heading/10 dark:bg-white/10">{{ .Params.label }}</span>
+              {{ end }}
+            </a>
+            {{ else }}
+            <a href="{{ .RelPermalink }}" class="unset hover:text-text-link">
+              <span class="hover:underline">{{ .Title }}</span>
+            </a>
+            {{ end }}
+          </div>
+          <div class="text-text-muted text-sm">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "Jan 2, 2006" }}
+            </time>
+          </div>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+</section>
+{{ end }}

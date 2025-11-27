@@ -1,9 +1,11 @@
 ---
-featured: true
-external: false
 title: Installing Neovim in MacOS
+slug: install-neovim-macos
 description: A guide to install and run neovim in MacOS using nvim command.
 date: 2024-07-27
+params:
+  featured: true
+  external: false
 ---
 
 Neovim moves fast. If you want to stay on the bleeding edge, you have to install the latest version directly from the [releases](https://github.com/neovim/neovim/releases) page.

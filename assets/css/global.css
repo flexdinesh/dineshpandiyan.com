@@ -1,0 +1,478 @@
+/* ============================================ */
+/* Font Face - Inter */
+/* ============================================ */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter/inter-v18-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter/inter-v18-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/inter/inter-v18-latin-800.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/inter/inter-v18-latin-900.woff2") format("woff2");
+}
+
+/* ============================================ */
+/* Root Styles */
+/* ============================================ */
+html {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background-color: var(--color-bg-body);
+  color: var(--color-text-body);
+  line-height: 28px;
+  transition: background-color 0.3s ease;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* ============================================ */
+/* Typography */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: var(--color-text-heading);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0.75em 0 0.5em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.125em;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 0.875em;
+  font-weight: 700;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+strong {
+  font-weight: 600;
+  color: var(--color-text-bold);
+}
+
+em {
+  font-style: italic;
+}
+
+mark {
+  background-color: var(--color-bg-selection);
+  color: var(--color-text-selection);
+}
+
+::selection {
+  background: var(--color-bg-selection);
+  color: var(--color-text-selection);
+}
+
+/* ============================================ */
+/* Links */
+/* ============================================ */
+a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+  background-repeat: no-repeat;
+}
+
+a:hover {
+  color: var(--color-text-link);
+}
+
+a.active {
+  color: var(--color-text-link);
+}
+
+a.unset {
+  text-decoration: none;
+}
+
+a.unset:hover {
+  text-decoration: none;
+}
+
+/* ============================================ */
+/* Lists */
+/* ============================================ */
+ul,
+ol {
+  margin: 1em 0;
+  padding-left: 2em;
+  list-style: revert;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+ul.unset {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.unset li {
+  padding: 0;
+}
+
+/* ============================================ */
+/* Code Blocks */
+/* ============================================ */
+code {
+  font-family: "Courier New", monospace;
+  font-size: 0.875em;
+  color: var(--color-text-code);
+}
+
+code:not(pre code):not(.unset) {
+  background-color: var(--color-bg-code);
+  color: var(--color-text-code);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-weight: 400;
+  border: 1px solid var(--color-border-code);
+}
+
+@media (prefers-color-scheme: dark) {
+  code:not(pre code) {
+    background-color: oklch(from var(--color-bg-code) l c h / 0.15);
+    border-color: oklch(from var(--color-border-code) l c h / 0.15);
+  }
+}
+
+pre {
+  background-color: var(--color-bg-code);
+  border: 1px solid var(--color-border-code);
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: 0.9em;
+  display: block;
+}
+
+/* ============================================ */
+/* Layout - Body Grid */
+/* ============================================ */
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 5rem minmax(0, 1fr) 2rem;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  body {
+    padding: 0 2rem;
+  }
+}
+
+/* ============================================ */
+/* Main Content */
+/* ============================================ */
+main {
+  grid-area: main;
+  min-height: 60vh;
+  padding: 2rem 0;
+}
+
+/* ============================================ */
+/* Label/Badge Styles */
+/* ============================================ */
+.label {
+  font-size: 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  outline: 1px solid currentColor;
+  border-radius: 0.125rem;
+  padding: 0 0.25rem;
+  color: black;
+  word-wrap: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  .label {
+    color: white;
+  }
+}
+
+.bg-label-blue {
+  background-color: var(--color-label-blue);
+}
+
+.bg-label-gray {
+  background-color: var(--color-label-gray);
+}
+
+.bg-label-yellow {
+  background-color: var(--color-label-yellow);
+}
+
+.bg-label-orange {
+  background-color: var(--color-label-orange);
+}
+
+.bg-label-red {
+  background-color: var(--color-label-red);
+}
+
+/* ============================================ */
+/* Gradient Link Effect */
+/* ============================================ */
+.gradient-link {
+  position: relative;
+  box-decoration-break: clone;
+  text-decoration: none;
+  letter-spacing: 0.025em;
+  font-weight: 700;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #f57111, #f79605);
+}
+
+.gradient-link:hover::after {
+  transform: translateZ(0) scale(1);
+}
+
+.gradient-link::after {
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  content: "";
+  height: 2px;
+  position: absolute;
+  transform: translateZ(0) scaleX(0);
+  transform-origin: left center;
+  transition: all 0.15s ease-in-out;
+  background-image: linear-gradient(to right, #f57111, #f79605);
+}
+
+/* ============================================ */
+/* Post Styles */
+/* ============================================ */
+.post-header {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+.post-header h1 {
+  margin: 0;
+}
+
+.post-meta {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.post-description {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+.canonical {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--color-bg-code);
+  border-left: 3px solid var(--color-text-link);
+  font-size: 0.875rem;
+}
+
+.post-content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem 0;
+}
+
+.badge-featured {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  background-color: var(--color-label-blue);
+  color: black;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge-featured {
+    color: white;
+  }
+}
+
+/* ============================================ */
+/* Home Page Hero */
+/* ============================================ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 2em;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 2.5em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-title {
+    color: var(--color-text-heading);
+  }
+}
+
+/* ============================================ */
+/* Section Styles */
+/* ============================================ */
+.section-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  color: var(--color-text-heading);
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.section-links {
+  display: flex;
+  gap: 1rem;
+  color: var(--color-text-bold);
+}
+
+.section-intro {
+  margin-bottom: 2rem;
+}
+
+.featured {
+  margin-bottom: 2rem;
+}
+
+.hero-section {
+  margin-bottom: 1rem;
+}
+
+.featured-section {
+  margin-bottom: 1.5rem;
+}
+
+.featured-list {
+  margin-top: 0.5rem;
+}
+
+.featured-item {
+  margin-bottom: 0.75rem;
+}
+
+.links-section {
+  margin-top: 1.5rem;
+}
+
+.external-icon {
+  margin-left: 0.25rem;
+  font-size: 0.875rem;
+}

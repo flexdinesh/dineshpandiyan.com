@@ -1,10 +1,12 @@
 ---
-featured: true
-external: false
 title: 2022 Year in Review
+slug: 2022-year-in-review
 description: A review of the year 2022, the opportunities, the gratitude and what I'm looking forward to in the new year.
 date: 2023-01-04
-ogImagePath: /images/blog/2022-year-in-review-cover.png
+params:
+  featured: true
+  external: false
+  ogImagePath: /images/blog/2022-year-in-review-cover.png
 ---
 
 ![2022 Year In Review Cover](/images/blog/2022-year-in-review-cover.png)

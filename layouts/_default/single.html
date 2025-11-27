@@ -1,0 +1,52 @@
+{{ define "main" }}
+{{ if and .Params.external .Params.url }}
+  <div class="external-redirect">
+    <h1>{{ .Title }}</h1>
+    <p>Redirecting to external content...</p>
+    <p>
+      If you are not redirected automatically,
+      <a href="{{ .Params.url }}">click here</a>.
+    </p>
+  </div>
+  <link rel="canonical" href="{{ .Params.url }}">
+  <meta http-equiv="refresh" content="0; url={{ .Params.url }}">
+  <script>
+    window.location.href = "{{ .Params.url }}";
+  </script>
+{{ else }}
+<article class="single-post">
+  <section class="post-header">
+    <h1>{{ .Title }}</h1>
+
+    <div class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+
+      {{ if .Params.label }}
+        <span class="label label-{{ .Params.label }}">
+          {{ .Params.label }}
+        </span>
+      {{ end }}
+    </div>
+
+    {{ if .Params.canonicalUrl }}
+      <p class="canonical">
+        Originally published at
+        <a href="{{ .Params.canonicalUrl }}" rel="canonical">
+          {{ .Params.canonicalUrl }}
+        </a>
+      </p>
+    {{ end }}
+  </section>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  <div>
+    <a href="{{ .Section | relURL }}">← Back to {{ .Section }}</a>
+  </div>
+</article>
+{{ end }}
+{{ end }}

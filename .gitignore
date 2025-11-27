@@ -1,18 +1,7 @@
-# astro
-.astro
-
-# build output
-dist/
-
-# dependencies
-node_modules/
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
+# hugo
+public/
+.hugo_build.lock
+resources/
 
 # environment variables
 .env
@@ -20,12 +9,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-# yarn
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions

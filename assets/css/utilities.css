@@ -1,0 +1,308 @@
+/* ============================================ */
+/* Utility Classes */
+/* ============================================ */
+
+/* Display */
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Flex Direction */
+.flex-col {
+  flex-direction: column;
+}
+
+/* Align & Justify */
+.items-center {
+  align-items: center;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+/* Grid */
+.grid-cols-\[1fr\] {
+  grid-template-columns: 1fr;
+}
+
+/* Position */
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+/* Z-Index */
+.z-10 {
+  z-index: 10;
+}
+
+/* Spacing - Margin */
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+/* Spacing - Padding */
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pr-8 {
+  padding-right: 2rem;
+}
+
+/* Gap */
+.gap-4 {
+  gap: 1rem;
+}
+
+/* Typography - Font Size */
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-\[2em\] {
+  font-size: 2em;
+}
+
+/* Typography - Font Weight */
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+/* Typography - Line Height */
+.leading-\[1\.25\] {
+  line-height: 1.25;
+}
+
+/* Typography - Letter Spacing */
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+/* Typography - Text Decoration */
+.underline {
+  text-decoration: underline;
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+/* Typography - Colors */
+.text-transparent {
+  color: transparent;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-text-bold {
+  color: var(--color-text-bold);
+}
+
+.text-text-heading {
+  color: var(--color-text-heading);
+}
+
+.text-text-muted {
+  color: var(--color-text-muted);
+}
+
+.hover\:text-text-link:hover {
+  color: var(--color-text-link);
+}
+
+/* List Style */
+.list-none {
+  list-style-type: none;
+}
+
+/* Border Radius */
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Background Gradients */
+.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-\[\#f57111\] {
+  --tw-gradient-from: #f57111;
+  --tw-gradient-stops:
+    var(--tw-gradient-from), var(--tw-gradient-to, rgba(245, 113, 17, 0));
+}
+
+.to-\[\#f79605\] {
+  --tw-gradient-to: #f79605;
+}
+
+/* Background Clip */
+.bg-clip-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Background Colors */
+.bg-text-heading\/10 {
+  background-color: rgba(27, 27, 27, 0.1);
+}
+
+/* Min Height */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+/* Screen Reader Only */
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Group Hover */
+.group {
+  position: relative;
+}
+
+.group-hover\:underline {
+  text-decoration: none;
+}
+
+.group:hover .group-hover\:underline {
+  text-decoration: underline;
+}
+
+/* ============================================ */
+/* Responsive Utilities */
+/* ============================================ */
+
+/* Hide on very small screens */
+.max-\[375px\]\:hidden {
+  display: none;
+}
+
+@media (min-width: 376px) {
+  .max-\[375px\]\:hidden {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-\[2\.5em\] {
+    font-size: 2.5em;
+  }
+}
+
+/* ============================================ */
+/* Dark Mode Utilities */
+/* ============================================ */
+@media (prefers-color-scheme: dark) {
+  .dark\:text-text-heading {
+    color: var(--color-text-heading);
+  }
+
+  .dark\:bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

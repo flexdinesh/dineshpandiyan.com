@@ -1,0 +1,552 @@
+/* ============================================ */
+
+/* ============================================ */
+/* CSS Variables - Light Theme */
+/* ============================================ */
+.theme-sleek {
+  /* #1b1b1b */
+  --color-primary-main: oklch(0.16 0 0);
+  --color-label-blue: oklch(0.88 0.05 230);
+  --color-label-gray: oklch(0.92 0.01 250);
+  --color-label-yellow: oklch(0.92 0.1 95);
+  --color-label-orange: oklch(0.88 0.08 65);
+  --color-label-red: oklch(0.86 0.08 10);
+
+  /* #1b1b1b */
+  --color-text-body: oklch(0.16 0 0);
+  /* #1b1b1b */
+  --color-text-heading: oklch(0.16 0 0);
+  /* #1b1b1b */
+  --color-text-bold: oklch(0.16 0 0);
+  /* #777 */
+  --color-text-muted: oklch(0.55 0 0);
+  /* #0074de */
+  --color-text-link: oklch(0.55 0.17 250);
+
+  /* black */
+  --color-text-code: oklch(0 0 0);
+  /* black */
+  --color-text-selection: oklch(0 0 0);
+
+  /* white */
+  --color-bg-body: oklch(1 0 0);
+  /* next.js blog code */
+  --color-bg-code: oklch(0.96 0 0);
+  /* #fef08a */
+  --color-bg-selection: oklch(0.94 0.11 100);
+
+  /* next.js blog code */
+  --color-border-code: oklch(0.93 0 0);
+}
+
+/* ============================================ */
+/* CSS Variables - Dark Theme */
+/* ============================================ */
+@media (prefers-color-scheme: dark) {
+.theme-sleek {
+  /* softer white for primary */
+  --color-primary-main: oklch(0.92 0 0);
+  --color-label-blue: oklch(0.55 0.11 235);
+  --color-label-gray: oklch(0.4 0.03 250);
+  --color-label-yellow: oklch(0.6 0.11 65);
+  --color-label-orange: oklch(0.6 0.15 40);
+  --color-label-red: oklch(0.58 0.2 10);
+
+  /* softer off-white for better readability */
+  --color-text-body: oklch(0.92 0 0);
+  /* slightly brighter for headings */
+  --color-text-heading: oklch(0.95 0 0);
+  /* same as body */
+  --color-text-bold: oklch(0.92 0 0);
+  /* lighter muted text for dark mode */
+  --color-text-muted: oklch(0.65 0 0);
+  /* slightly brighter link */
+  --color-text-link: oklch(0.78 0.13 255);
+  /* softer code text */
+  --color-text-code: oklch(0.9 0 0);
+  /* keep black for selection text */
+  --color-text-selection: oklch(0 0 0);
+
+  /* dark background */
+  --color-bg-body: oklch(0.25 0 0);
+  /* slightly lighter for code blocks */
+  --color-bg-code: oklch(0.3 0 0);
+  /* muted cyan for selection */
+  --color-bg-selection: oklch(0.7 0.1 200);
+
+  /* subtle border for dark mode */
+  --color-border-code: oklch(0.4 0 0);
+}
+}
+
+/* Syntax Highlighting */
+/* ============================================ */
+/* Loaded separately via Hugo pipes in baseof.html */
+
+/* Light theme - github style */
+.theme-sleek .bg {
+  background-color: #fff;
+}
+.theme-sleek .chroma {
+  background-color: #fff;
+}
+.theme-sleek .chroma .err {
+  color: #f6f8fa;
+  background-color: #82071e;
+}
+.theme-sleek .chroma .lnlinks {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+.theme-sleek .chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.theme-sleek .chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.theme-sleek .chroma .hl {
+  background-color: #e5e5e5;
+}
+.theme-sleek .chroma .lnt {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #7f7f7f;
+}
+.theme-sleek .chroma .ln {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #7f7f7f;
+}
+.theme-sleek .chroma .line {
+  display: flex;
+}
+.theme-sleek .chroma .k {
+  color: #cf222e;
+}
+.theme-sleek .chroma .kc {
+  color: #cf222e;
+}
+.theme-sleek .chroma .kd {
+  color: #cf222e;
+}
+.theme-sleek .chroma .kn {
+  color: #cf222e;
+}
+.theme-sleek .chroma .kp {
+  color: #cf222e;
+}
+.theme-sleek .chroma .kr {
+  color: #cf222e;
+}
+.theme-sleek .chroma .kt {
+  color: #cf222e;
+}
+.theme-sleek .chroma .na {
+  color: #1f2328;
+}
+.theme-sleek .chroma .nc {
+  color: #1f2328;
+}
+.theme-sleek .chroma .no {
+  color: #0550ae;
+}
+.theme-sleek .chroma .nd {
+  color: #0550ae;
+}
+.theme-sleek .chroma .ni {
+  color: #6639ba;
+}
+.theme-sleek .chroma .nl {
+  color: #900;
+  font-weight: bold;
+}
+.theme-sleek .chroma .nn {
+  color: #24292e;
+}
+.theme-sleek .chroma .nx {
+  color: #1f2328;
+}
+.theme-sleek .chroma .nt {
+  color: #0550ae;
+}
+.theme-sleek .chroma .nb {
+  color: #6639ba;
+}
+.theme-sleek .chroma .bp {
+  color: #6a737d;
+}
+.theme-sleek .chroma .nv {
+  color: #953800;
+}
+.theme-sleek .chroma .vc {
+  color: #953800;
+}
+.theme-sleek .chroma .vg {
+  color: #953800;
+}
+.theme-sleek .chroma .vi {
+  color: #953800;
+}
+.theme-sleek .chroma .vm {
+  color: #953800;
+}
+.theme-sleek .chroma .nf {
+  color: #6639ba;
+}
+.theme-sleek .chroma .fm {
+  color: #6639ba;
+}
+.theme-sleek .chroma .s {
+  color: #0a3069;
+}
+.theme-sleek .chroma .sa {
+  color: #0a3069;
+}
+.theme-sleek .chroma .sb {
+  color: #0a3069;
+}
+.theme-sleek .chroma .sc {
+  color: #0a3069;
+}
+.theme-sleek .chroma .dl {
+  color: #0a3069;
+}
+.theme-sleek .chroma .sd {
+  color: #0a3069;
+}
+.theme-sleek .chroma .s2 {
+  color: #0a3069;
+}
+.theme-sleek .chroma .se {
+  color: #0a3069;
+}
+.theme-sleek .chroma .sh {
+  color: #0a3069;
+}
+.theme-sleek .chroma .si {
+  color: #0a3069;
+}
+.theme-sleek .chroma .sx {
+  color: #0a3069;
+}
+.theme-sleek .chroma .sr {
+  color: #0a3069;
+}
+.theme-sleek .chroma .s1 {
+  color: #0a3069;
+}
+.theme-sleek .chroma .ss {
+  color: #0a3069;
+}
+.theme-sleek .chroma .m {
+  color: #116329;
+}
+.theme-sleek .chroma .mb {
+  color: #116329;
+}
+.theme-sleek .chroma .mf {
+  color: #116329;
+}
+.theme-sleek .chroma .mh {
+  color: #116329;
+}
+.theme-sleek .chroma .mi {
+  color: #116329;
+}
+.theme-sleek .chroma .il {
+  color: #116329;
+}
+.theme-sleek .chroma .mo {
+  color: #116329;
+}
+.theme-sleek .chroma .o {
+  color: #1f2328;
+}
+.theme-sleek .chroma .ow {
+  color: #1f2328;
+}
+.theme-sleek .chroma .c {
+  color: #6a737d;
+}
+.theme-sleek .chroma .ch {
+  color: #6a737d;
+}
+.theme-sleek .chroma .cm {
+  color: #6a737d;
+}
+.theme-sleek .chroma .c1 {
+  color: #6a737d;
+}
+.theme-sleek .chroma .cs {
+  color: #6a737d;
+}
+.theme-sleek .chroma .cp {
+  color: #1f2328;
+}
+.theme-sleek .chroma .cpf {
+  color: #1f2328;
+}
+.theme-sleek .chroma .gd {
+  color: #82071e;
+}
+.theme-sleek .chroma .ge {
+  font-style: italic;
+}
+.theme-sleek .chroma .gr {
+  color: #f6f8fa;
+}
+.theme-sleek .chroma .gh {
+  color: #0550ae;
+  font-weight: bold;
+}
+.theme-sleek .chroma .gi {
+  color: #116329;
+}
+.theme-sleek .chroma .go {
+  color: #54aeff;
+}
+.theme-sleek .chroma .gp {
+  color: #6a737d;
+}
+.theme-sleek .chroma .gs {
+  font-weight: bold;
+}
+.theme-sleek .chroma .gu {
+  color: #0550ae;
+}
+.theme-sleek .chroma .gt {
+  color: #82071e;
+}
+.theme-sleek .chroma .gl {
+  text-decoration: underline;
+}
+.theme-sleek .chroma .w {
+  color: #6a737d;
+}
+
+/* Dark theme - monokai style */
+@media (prefers-color-scheme: dark) {
+.theme-sleek .bg {
+  color: #f8f8f2;
+  background-color: #272822;
+}
+.theme-sleek .chroma {
+  color: #f8f8f2;
+  background-color: #272822;
+}
+.theme-sleek .chroma .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.theme-sleek .chroma .lnlinks {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+.theme-sleek .chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.theme-sleek .chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.theme-sleek .chroma .hl {
+  background-color: #3c3d38;
+}
+.theme-sleek .chroma .lnt {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #7f7f7f;
+}
+.theme-sleek .chroma .ln {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #7f7f7f;
+}
+.theme-sleek .chroma .line {
+  display: flex;
+}
+.theme-sleek .chroma .k {
+  color: #66d9ef;
+}
+.theme-sleek .chroma .kc {
+  color: #66d9ef;
+}
+.theme-sleek .chroma .kd {
+  color: #66d9ef;
+}
+.theme-sleek .chroma .kn {
+  color: #f92672;
+}
+.theme-sleek .chroma .kp {
+  color: #66d9ef;
+}
+.theme-sleek .chroma .kr {
+  color: #66d9ef;
+}
+.theme-sleek .chroma .kt {
+  color: #66d9ef;
+}
+.theme-sleek .chroma .na {
+  color: #a6e22e;
+}
+.theme-sleek .chroma .nc {
+  color: #a6e22e;
+}
+.theme-sleek .chroma .no {
+  color: #66d9ef;
+}
+.theme-sleek .chroma .nd {
+  color: #a6e22e;
+}
+.theme-sleek .chroma .ne {
+  color: #a6e22e;
+}
+.theme-sleek .chroma .nx {
+  color: #a6e22e;
+}
+.theme-sleek .chroma .nt {
+  color: #f92672;
+}
+.theme-sleek .chroma .nf {
+  color: #a6e22e;
+}
+.theme-sleek .chroma .fm {
+  color: #a6e22e;
+}
+.theme-sleek .chroma .l {
+  color: #ae81ff;
+}
+.theme-sleek .chroma .ld {
+  color: #e6db74;
+}
+.theme-sleek .chroma .s {
+  color: #e6db74;
+}
+.theme-sleek .chroma .sa {
+  color: #e6db74;
+}
+.theme-sleek .chroma .sb {
+  color: #e6db74;
+}
+.theme-sleek .chroma .sc {
+  color: #e6db74;
+}
+.theme-sleek .chroma .dl {
+  color: #e6db74;
+}
+.theme-sleek .chroma .sd {
+  color: #e6db74;
+}
+.theme-sleek .chroma .s2 {
+  color: #e6db74;
+}
+.theme-sleek .chroma .se {
+  color: #ae81ff;
+}
+.theme-sleek .chroma .sh {
+  color: #e6db74;
+}
+.theme-sleek .chroma .si {
+  color: #e6db74;
+}
+.theme-sleek .chroma .sx {
+  color: #e6db74;
+}
+.theme-sleek .chroma .sr {
+  color: #e6db74;
+}
+.theme-sleek .chroma .s1 {
+  color: #e6db74;
+}
+.theme-sleek .chroma .ss {
+  color: #e6db74;
+}
+.theme-sleek .chroma .m {
+  color: #ae81ff;
+}
+.theme-sleek .chroma .mb {
+  color: #ae81ff;
+}
+.theme-sleek .chroma .mf {
+  color: #ae81ff;
+}
+.theme-sleek .chroma .mh {
+  color: #ae81ff;
+}
+.theme-sleek .chroma .mi {
+  color: #ae81ff;
+}
+.theme-sleek .chroma .il {
+  color: #ae81ff;
+}
+.theme-sleek .chroma .mo {
+  color: #ae81ff;
+}
+.theme-sleek .chroma .o {
+  color: #f92672;
+}
+.theme-sleek .chroma .ow {
+  color: #f92672;
+}
+.theme-sleek .chroma .c {
+  color: #75715e;
+}
+.theme-sleek .chroma .ch {
+  color: #75715e;
+}
+.theme-sleek .chroma .cm {
+  color: #75715e;
+}
+.theme-sleek .chroma .c1 {
+  color: #75715e;
+}
+.theme-sleek .chroma .cs {
+  color: #75715e;
+}
+.theme-sleek .chroma .cp {
+  color: #75715e;
+}
+.theme-sleek .chroma .cpf {
+  color: #75715e;
+}
+.theme-sleek .chroma .gd {
+  color: #f92672;
+}
+.theme-sleek .chroma .ge {
+  font-style: italic;
+}
+.theme-sleek .chroma .gi {
+  color: #a6e22e;
+}
+.theme-sleek .chroma .gs {
+  font-weight: bold;
+}
+.theme-sleek .chroma .gu {
+  color: #75715e;
+}
+}

@@ -1,0 +1,14 @@
+<header>
+  <a class="unset skip-to-content" href="#main">
+    Skip to content
+  </a>
+
+  <nav class="header-nav">
+    <ul class="unset">
+      <li><a href="/" {{ if eq .RelPermalink "/" }}class="active"{{ end }}>Home</a></li>
+      <li><a href="/blog/" {{ if eq .Section "blog" }}class="active"{{ end }}>Blog</a></li>
+      <li><a href="/talks/" {{ if eq .Section "talks" }}class="active"{{ end }}>Talks</a></li>
+      <li><a href="/notes/" {{ if eq .Section "notes" }}class="active"{{ end }}>Notes</a></li>
+    </ul>
+  </nav>
+</header>

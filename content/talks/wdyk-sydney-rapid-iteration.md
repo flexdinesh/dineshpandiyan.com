@@ -1,8 +1,9 @@
 ---
-external: false
-featured: true
 title: "WDYK Sydney: Rapid iteration with schema driven development"
 date: 2022-10-06
+params:
+  external: false
+  featured: true
 ---
 
 [The What Do You Know Sydney ’22 Lineup](https://webdirections.org/blog/the-what-do-you-know-sydney-22-lineup).

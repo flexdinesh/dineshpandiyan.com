@@ -1,6 +1,8 @@
 ---
-draft: true
 title: DRAFT Code cheatsheet
 date: 2022-10-09
-url: https://github.com/flexdinesh/code-cheatsheet
+draft: true
+params:
+  external: true
+  url: https://github.com/flexdinesh/code-cheatsheet
 ---
