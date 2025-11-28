@@ -194,6 +194,7 @@ code:not(pre code):not(.unset) {
   border-radius: 0.25rem;
   font-weight: 400;
   border: 1px solid var(--color-border-code);
+  white-space: nowrap;
 }
 
 @media (prefers-color-scheme: dark) {
