@@ -7,97 +7,97 @@
 
   <!-- SEO Meta Tags -->
   <title>{{ if .Title }}{{ .Title }} | {{ site.Title }}{{ else }}{{ site.Title }}{{ end }}</title>
-  {{ with .Description }}
+  {{- with .Description }}
   <meta name="description" content="{{ . }}">
-  {{ else }}
-  {{ with site.Params.description }}
+  {{- else }}
+  {{- with site.Params.description }}
   <meta name="description" content="{{ . }}">
-  {{ end }}
-  {{ end }}
-  {{ with site.Params.author }}
+  {{- end }}
+  {{- end }}
+  {{- with site.Params.author }}
   <meta name="author" content="{{ . }}">
-  {{ end }}
+  {{- end }}
 
   <!-- OpenGraph Meta Tags -->
   <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
-  {{ with .Description }}
+  {{- with .Description }}
   <meta property="og:description" content="{{ . }}">
-  {{ else }}
-  {{ with site.Params.description }}
+  {{- else }}
+  {{- with site.Params.description }}
   <meta property="og:description" content="{{ . }}">
-  {{ end }}
-  {{ end }}
+  {{- end }}
+  {{- end }}
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
-  {{ with .Params.ogImagePath }}
+  {{- with .Params.ogImagePath }}
     {{- $ogImagePath := strings.TrimPrefix "/images/" . -}}
     {{- $ogResource := resources.Get (printf "images/%s" $ogImagePath) -}}
     {{- if $ogResource -}}
       {{- $ogWebp := $ogResource.Resize "1200x webp q85" -}}
-      <meta property="og:image" content="{{ $ogWebp.Permalink }}">
+  <meta property="og:image" content="{{ $ogWebp.Permalink }}">
     {{- else -}}
-      <meta property="og:image" content="{{ . | absURL }}">
+  <meta property="og:image" content="{{ . | absURL }}">
     {{- end -}}
-  {{ else }}
-  {{ with site.Params.ogImagePath }}
+  {{- else }}
+  {{- with site.Params.ogImagePath }}
     {{- $ogImagePath := strings.TrimPrefix "/images/" . -}}
     {{- $ogResource := resources.Get (printf "images/%s" $ogImagePath) -}}
     {{- if $ogResource -}}
       {{- $ogWebp := $ogResource.Resize "1200x webp q85" -}}
-      <meta property="og:image" content="{{ $ogWebp.Permalink }}">
+  <meta property="og:image" content="{{ $ogWebp.Permalink }}">
     {{- else -}}
-      <meta property="og:image" content="{{ . | absURL }}">
+  <meta property="og:image" content="{{ . | absURL }}">
     {{- end -}}
-  {{ end }}
-  {{ end }}
-  {{ with site.Params.ogImageAlt }}
+  {{- end }}
+  {{- end }}
+  {{- with site.Params.ogImageAlt }}
   <meta property="og:image:alt" content="{{ . }}">
-  {{ end }}
-  {{ with site.Params.ogImageWidth }}
+  {{- end }}
+  {{- with site.Params.ogImageWidth }}
   <meta property="og:image:width" content="{{ . }}">
-  {{ end }}
-  {{ with site.Params.ogImageHeight }}
+  {{- end }}
+  {{- with site.Params.ogImageHeight }}
   <meta property="og:image:height" content="{{ . }}">
-  {{ end }}
+  {{- end }}
 
   <!-- Twitter Card Meta Tags -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
-  {{ with .Description }}
+  {{- with .Description }}
   <meta property="twitter:description" content="{{ . }}">
-  {{ else }}
-  {{ with site.Params.description }}
+  {{- else }}
+  {{- with site.Params.description }}
   <meta property="twitter:description" content="{{ . }}">
-  {{ end }}
-  {{ end }}
-  {{ with site.Params.twitterHandle }}
+  {{- end }}
+  {{- end }}
+  {{- with site.Params.twitterHandle }}
   <meta property="twitter:site" content="{{ . }}">
   <meta property="twitter:creator" content="{{ . }}">
-  {{ end }}
-  {{ with .Params.ogImagePath }}
+  {{- end }}
+  {{- with .Params.ogImagePath }}
     {{- $twitterImagePath := strings.TrimPrefix "/images/" . -}}
     {{- $twitterResource := resources.Get (printf "images/%s" $twitterImagePath) -}}
     {{- if $twitterResource -}}
       {{- $twitterWebp := $twitterResource.Resize "1200x webp q85" -}}
-      <meta property="twitter:image" content="{{ $twitterWebp.Permalink }}">
+  <meta property="twitter:image" content="{{ $twitterWebp.Permalink }}">
     {{- else -}}
-      <meta property="twitter:image" content="{{ . | absURL }}">
+  <meta property="twitter:image" content="{{ . | absURL }}">
     {{- end -}}
-  {{ else }}
-  {{ with site.Params.ogImagePath }}
+  {{- else }}
+  {{- with site.Params.ogImagePath }}
     {{- $twitterImagePath := strings.TrimPrefix "/images/" . -}}
     {{- $twitterResource := resources.Get (printf "images/%s" $twitterImagePath) -}}
     {{- if $twitterResource -}}
       {{- $twitterWebp := $twitterResource.Resize "1200x webp q85" -}}
-      <meta property="twitter:image" content="{{ $twitterWebp.Permalink }}">
+  <meta property="twitter:image" content="{{ $twitterWebp.Permalink }}">
     {{- else -}}
-      <meta property="twitter:image" content="{{ . | absURL }}">
+  <meta property="twitter:image" content="{{ . | absURL }}">
     {{- end -}}
-  {{ end }}
-  {{ end }}
-  {{ with site.Params.ogImageAlt }}
+  {{- end }}
+  {{- end }}
+  {{- with site.Params.ogImageAlt }}
   <meta property="twitter:image:alt" content="{{ . }}">
-  {{ end }}
+  {{- end }}
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>">
