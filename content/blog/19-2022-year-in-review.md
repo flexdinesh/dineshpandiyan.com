@@ -37,7 +37,7 @@ My takeaway —
 
 ## Advocate for Keystone
 
-[Keystone](https://twitter.com/KeystoneJS) is my favourite tool to build backends. I have built multiple API platforms with Keystone and often talk about how good the developer experience is. Towards the second half of year I joined the Keystone team as a **Developer Advocate** to help build a relationship with the community and spread the word. And I gotta say, it's going great. I truly enjoy working in this problem space and have big plans for the new year. **2023 is going to be the year of Keystone and I can't wait.**
+[Keystone](https://x.com/KeystoneJS) is my favourite tool to build backends. I have built multiple API platforms with Keystone and often talk about how good the developer experience is. Towards the second half of year I joined the Keystone team as a **Developer Advocate** to help build a relationship with the community and spread the word. And I gotta say, it's going great. I truly enjoy working in this problem space and have big plans for the new year. **2023 is going to be the year of Keystone and I can't wait.**
 
 ## Speaking and Community
 
@@ -60,13 +60,13 @@ So I started shipping.
 
 ### I shipped Pocketnotes
 
-Announcement post: [Introducing my side project — Pocketnotes](https://twitter.com/flexdinesh/status/1587567793712816130).
+Announcement post: [Introducing my side project — Pocketnotes](https://x.com/dpandiyan/status/1587567793712816130).
 
 The whole idea was born around the time Vercel announced [OG Image Generation](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) at the edge. I have been meaning to play around with [Edge Runtime](https://vercel.com/docs/concepts/functions/edge-functions) to build a mental model around data at the edge and the announcement of the `@vercel/og` library came at the right time. I was also reading up a bit about [Upstash Redis](https://upstash.com) at the time and used that as a data source at the edge for Pocketnotes. All in all, I learnt plenty about rendering, caching and data at the edge by building [Pocketnotes](https://pocketnotes.app).
 
 ### I shipped Blogster
 
-Announcement post: [Introducing Blogster](https://twitter.com/flexdinesh/status/1605685191703687168).
+Announcement post: [Introducing Blogster](https://x.com/dpandiyan/status/1605685191703687168).
 
 > Astro is a web framework for building fast, content-focused websites.
 

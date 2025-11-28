@@ -117,4 +117,4 @@ All the requests from the resolvers of the same type (`User.tasks`) are queued i
 - It is not easy to avoid N+1 data fetching in GraphQL because of the way resolvers are designed to work.
 - I have published an [npm package](https://www.npmjs.com/package/next-batch) to help solve the N+1 problem in GraphQL resolvers with a simple, _no-setup-needed_ API.
 
-If you have thoughts or questions, hit me up in Twitter [@flexdinesh](https://twitter.com/flexdinesh).
+If you have thoughts or questions, hit me up in Twitter [@flexdinesh](https://x.com/dpandiyan).

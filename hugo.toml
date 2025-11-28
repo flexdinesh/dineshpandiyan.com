@@ -11,7 +11,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 [params]
   description = 'I write about modern web, servers and performance.'
   author = 'Dinesh Pandiyan'
-  twitterHandle = '@flexdinesh'
+  twitterHandle = '@dpandiyan'
   ogImagePath = '/images/og.png?v=2'
   ogImageAlt = 'My fancy website'
   ogImageWidth = '1200'
