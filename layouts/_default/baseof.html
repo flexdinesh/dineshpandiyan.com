@@ -109,6 +109,12 @@
     {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .RelPermalink site.Title | safeHTML }}
   {{ end -}}
 
+  <!-- Preload Fonts -->
+  <link rel="preload" href="/fonts/inter/inter-v18-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter/inter-v18-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter/inter-v18-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter/inter-v18-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+
   <!-- CSS -->
   {{ $reset := resources.Get "css/reset.css" }}
   {{ $utilities := resources.Get "css/utilities.css" }}
