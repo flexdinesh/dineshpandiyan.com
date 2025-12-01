@@ -341,11 +341,11 @@
 @media (prefers-color-scheme: dark) {
 .theme-sleek .bg {
   color: #f8f8f2;
-  background-color: #272822;
+  background-color: var(--color-bg-code);
 }
 .theme-sleek .chroma {
   color: #f8f8f2;
-  background-color: #272822;
+  background-color: var(--color-bg-code);
 }
 .theme-sleek .chroma .err {
   color: #960050;

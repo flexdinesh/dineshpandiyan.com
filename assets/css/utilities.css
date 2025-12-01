@@ -116,8 +116,8 @@
 
 /* Typography - Font Size */
 .text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 0.6875rem;
+  line-height: 1;
 }
 
 .text-sm {
@@ -233,7 +233,7 @@
 
 /* Background Colors */
 .bg-text-heading\/10 {
-  background-color: rgba(27, 27, 27, 0.1);
+  background-color: rgba(27, 27, 27, 0.08);
 }
 
 /* Min Height */
@@ -303,6 +303,6 @@
   }
 
   .dark\:bg-white\/10 {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
   }
 }

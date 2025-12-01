@@ -6,11 +6,12 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem 0 1.5rem;
+  padding: 0;
 }
 
 footer a.unset {
-  color: inherit;
+  color: var(--color-text-muted);
+  transition: color 0.15s ease;
 }
 
 footer a.unset:hover {
@@ -20,8 +21,8 @@ footer a.unset:hover {
 .social-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  color: var(--color-text-bold);
+  gap: 1.25rem;
+  color: var(--color-text-muted);
 }
 
 /* Theme Toggle Button */

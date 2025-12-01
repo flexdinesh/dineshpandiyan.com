@@ -16,9 +16,7 @@ Here's what we'll cover:
 
 - Why stacked diffs are worth the effort
 - The difference between a regular `git rebase` and `git rebase --onto`
-- Step-by-step: How to use `rebase --onto` for stacked branches
-- Summary: first sync, ongoing syncs, and post-merge cleanup
-- Tradeoffs and gotchas to watch out for
+- Step-by-step: first sync, ongoing syncs, and post-merge cleanup
 
 ## Why Stacked Diffs?
 
@@ -26,7 +24,7 @@ Let's say you're building a large feature. You could dump everything into one ma
 
 **Stacked diffs** solve this by breaking your work into smaller, dependent PRs:
 
-```
+```text {linenos=false}
 main
   └── feature-1 (auth layer)
         └── feature-2 (user profile)
@@ -41,7 +39,7 @@ Each PR is small, focused, and easy to review. The catch? When `main` updates or
 
 A regular `git rebase main` replays your commits on top of the target branch:
 
-```
+```text {linenos=false}
 Before:
 main:      A---B---C
                 \
@@ -59,7 +57,7 @@ Simple enough. But what happens with stacked branches?
 
 Here's a typical stacked setup:
 
-```
+```text {linenos=false}
 main:        A---B---C
                   \
 feature-1:         D---E
@@ -69,7 +67,7 @@ feature-2:               F---G
 
 Now `main` gets updated with new commits:
 
-```
+```text {linenos=false}
 main:        A---B---C---H---I
                   \
 feature-1:         D---E
@@ -79,7 +77,7 @@ feature-2:               F---G
 
 You rebase `feature-1` onto `main`:
 
-```
+```text {linenos=false}
 main:        A---B---C---H---I
                   \          \
 old:               D---E      D'---E'  ← feature-1 (new hashes!)
@@ -93,10 +91,10 @@ See the problem? `feature-2` is still based on the **old** `D---E` commits. If y
 
 This is where `git rebase --onto` shines. It lets you specify exactly which commits to move and where to put them:
 
-```bash
+```bash {linenos=false}
 git rebase --onto <new-base> <old-base> <branch>
-               ↑               ↑          ↑
-          new parent      old parent    branch to rebase
+                      ↑          ↑          ↑
+                new parent  old parent   branch to rebase
 ```
 
 Think of it as saying: "Take everything after `<old-base>` on `<branch>`, and replay it onto `<new-base>`."
@@ -160,7 +158,7 @@ git rebase -i main
 
 In the interactive rebase, you'll see all commits including the ones from `feature-1`:
 
-```
+```text {linenos=false}
 pick abc123 D' ...  ← DELETE (from feature-1)
 pick def456 E' ...  ← DELETE (from feature-1)
 pick 789ghi F  ...  ← KEEP (your work)
@@ -171,7 +169,7 @@ Delete (or mark as `drop`) the commits from `feature-1`, and Git will replay onl
 
 ### Putting it all together visually
 
-```
+```text {linenos=false}
 BEFORE REBASE:
 ==============
 main:             A---B---C---H---I
