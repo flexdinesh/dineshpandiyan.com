@@ -30,13 +30,13 @@
 
   /* white */
   --color-bg-body: oklch(1 0 0);
-  /* next.js blog code */
-  --color-bg-code: oklch(0.96 0 0);
+  /* slightly darker than bg */
+  --color-bg-code: oklch(0.97 0 0);
   /* #fef08a */
   --color-bg-selection: oklch(0.94 0.11 100);
 
-  /* next.js blog code */
-  --color-border-code: oklch(0.93 0 0);
+  /* subtle gray border */
+  --color-border-code: oklch(0.88 0 0);
 }
 
 /* ============================================ */

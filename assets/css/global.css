@@ -179,10 +179,24 @@ ul.unset li {
 }
 
 /* ============================================ */
+/* Blockquotes */
+/* ============================================ */
+blockquote {
+  margin: 1em 0;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid var(--color-text-link);
+  color: var(--color-text-muted);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* ============================================ */
 /* Code Blocks */
 /* ============================================ */
 code {
-  font-family: "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   font-size: 0.875em;
   color: var(--color-text-code);
 }
