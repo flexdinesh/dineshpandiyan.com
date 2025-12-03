@@ -23,23 +23,9 @@ header a.unset:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  color: var(--color-text-body);
+  /* color: var(--color-text-body); */
   justify-content: center;
   margin: 0;
-}
-
-.header-nav a {
-  text-decoration: none;
-  font-size: 0.9375rem;
-  transition: color 0.15s ease;
-}
-
-.header-nav a:hover,
-.header-nav a.active {
-  color: var(--color-text-link);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
 }
 
 /* Skip to content link (accessibility) */

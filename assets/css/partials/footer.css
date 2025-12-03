@@ -10,7 +10,7 @@ footer {
 }
 
 footer a.unset {
-  color: var(--color-text-muted);
+  color: var(--color-text-body);
   transition: color 0.15s ease;
 }
 
@@ -22,7 +22,6 @@ footer a.unset:hover {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  color: var(--color-text-muted);
 }
 
 /* Theme Toggle Button */

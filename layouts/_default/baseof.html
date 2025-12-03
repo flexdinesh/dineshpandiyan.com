@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="theme-sleek" lang="en">
+<html class="theme-newspaper" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,20 +110,29 @@
   {{ end -}}
 
   <!-- Preload Fonts -->
-  <link rel="preload" href="/fonts/inter/inter-v18-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- <link rel="preload" href="/fonts/inter/inter-v18-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter/inter-v18-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter/inter-v18-latin-800.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/inter/inter-v18-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter/inter-v18-latin-900.woff2" as="font" type="font/woff2" crossorigin> -->
+
+  <link rel="preload" href="/fonts/roboto-mono/roboto-mono-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/roboto-mono/roboto-mono-v22-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/roboto-mono/roboto-mono-v22-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/roboto-mono/roboto-mono-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/roboto-mono/roboto-mono-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- CSS -->
   {{ $reset := resources.Get "css/reset.css" }}
-  {{ $utilities := resources.Get "css/utilities.css" }}
-  {{ $theme := resources.Get "css/theme.css" }}
+  {{ $theme := resources.Get "css/theme-newspaper.css" }}
   {{ $global := resources.Get "css/global.css" }}
+  {{ $utilities := resources.Get "css/utilities.css" }}
+  {{ $components := resources.Get "css/components.css" }}
+  {{ $font := resources.Get "css/font-roboto.css" }}
+  {{ $prose := resources.Get "css/prose.css" }}
   {{ $layout := resources.Get "css/layouts/_default.css" }}
   {{ $header := resources.Get "css/partials/header.css" }}
   {{ $footer := resources.Get "css/partials/footer.css" }}
-  {{ $css := slice  $reset $utilities $theme $global $layout $header $footer | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint "md5" }}
+  {{ $css := slice  $reset $theme $global $utilities $components $font $prose $layout $header $footer | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint "md5" }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
   <!-- Theme Init Script (inlined to prevent FOUC) -->

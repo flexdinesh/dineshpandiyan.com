@@ -24,16 +24,16 @@
             <div class="grid grid-cols-[1fr]">
               <div class="title">
                 {{ if .Params.external }}
-                  <a href="{{ .Params.url }}" target="_blank" rel="noopener" class="unset group hover:text-text-link">
-                    <span class="group-hover:underline">{{ .Title }}</span>
-                    <span class="external-icon" aria-label="External link">↗</span>
+                  <a href="{{ .Params.url }}" target="_blank" rel="noopener" class="unset hover:text-text-link">
+                    <span>{{ .Title }}</span>
+                    <span class="external-icon mr-2" aria-label="External link">↗</span>
                     {{ if .Params.label }}
-                    <span class="ml-2 text-xs px-2 py-1 rounded bg-text-heading/10 dark:bg-white/10">{{ .Params.label }}</span>
+                    <span class="no-wrap text-xs px-2 py-1 rounded bg-text-heading/10 dark:bg-white/10">{{ .Params.label }}</span>
                     {{ end }}
                   </a>
                 {{ else }}
                   <a href="{{ .RelPermalink }}" class="unset hover:text-text-link">
-                    <span class="hover:underline">{{ .Title }}</span>
+                    <span>{{ .Title }}</span>
                   </a>
                 {{ end }}
               </div>

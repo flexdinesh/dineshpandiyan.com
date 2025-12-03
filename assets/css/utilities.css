@@ -77,6 +77,10 @@
   margin-left: 0.5rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 /* Spacing - Padding */
 .py-1 {
   padding-top: 0.25rem;
@@ -90,6 +94,13 @@
 
 .px-2 {
   padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+.pr-2 {
   padding-right: 0.5rem;
 }
 
@@ -268,6 +279,10 @@
   text-decoration: underline;
 }
 
+.no-wrap {
+  white-space: nowrap;
+
+}
 /* ============================================ */
 /* Responsive Utilities */
 /* ============================================ */
@@ -306,3 +321,4 @@
     background-color: rgba(255, 255, 255, 0.08);
   }
 }
+

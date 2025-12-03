@@ -5,10 +5,10 @@
 
   <nav class="header-nav">
     <ul class="unset">
-      <li><a href="/" {{ if eq .RelPermalink "/" }}class="active"{{ end }}>Home</a></li>
-      <li><a href="/blog/" {{ if eq .Section "blog" }}class="active"{{ end }}>Blog</a></li>
-      <li><a href="/talks/" {{ if eq .Section "talks" }}class="active"{{ end }}>Talks</a></li>
-      <li><a href="/notes/" {{ if eq .Section "notes" }}class="active"{{ end }}>Notes</a></li>
+      <li><a class="unset animated-link{{ if eq .RelPermalink "/" }} active{{ end }}" href="/">Home</a></li>
+      <li><a class="unset animated-link{{ if eq .Section "blog" }} active{{ end }}" href="/blog/">Blog</a></li>
+      <li><a class="unset animated-link{{ if eq .Section "talks" }} active{{ end }}" href="/talks/">Talks</a></li>
+      <li><a class="unset animated-link{{ if eq .Section "notes" }} active{{ end }}" href="/notes/">Notes</a></li>
     </ul>
   </nav>
 </header>
