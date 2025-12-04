@@ -10,7 +10,7 @@
   {{ $featured := where $pages ".Params.featured" true }}
 
   <section class="items">
-    <ul class="list-none unset">
+    <ul class="">
       {{ range $pages }}
       <li class="featured-item">
         <div class="grid grid-cols-[1fr]">
@@ -18,7 +18,7 @@
             {{ if .Params.external }}
             <a href="{{ .Params.url }}" target="_blank" rel="noopener noreferrer" class="unset hover:text-text-link">
               <span>{{ .Title }}</span>
-              <span class="external-icon mr-2" aria-label="External link">↗</span>
+              <span class="external-icon" aria-label="External link">↗</span>
               {{ if .Params.label }}
               <span class="no-wrap text-xs px-2 py-1 rounded bg-text-heading/10 dark:bg-white/10">{{ .Params.label }}</span>
               {{ end }}
