@@ -22,12 +22,6 @@
       <time datetime="{{ .Date.Format "2006-01-02" }}">
         {{ .Date.Format "January 2, 2006" }}
       </time>
-
-      {{ if .Params.label }}
-        <span class="label label-{{ .Params.label }}">
-          {{ .Params.label }}
-        </span>
-      {{ end }}
     </div>
 
     {{ if .Params.canonicalUrl }}
@@ -45,7 +39,7 @@
   </div>
 
   <div>
-    <a href="{{ .Section | relURL }}">← Back to {{ .Section }}</a>
+    <a href="{{ .Section | relURL }}" class="unset">← Back to {{ .Section }}</a>
   </div>
 </article>
 {{ end }}
