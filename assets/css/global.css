@@ -512,7 +512,7 @@ main {
 }
 
 .featured-item {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .links-section {
@@ -524,3 +524,34 @@ main {
   font-size: 0.75em;
   opacity: 0.6;
 }
+
+/* ul:not(.unset):not(:where([class~="prose"] *)) { */
+/*   padding-left: 0; */
+/*   list-style: none; */
+/* } */
+/**/
+/* ul:not(:where([class~="prose"] *)) > li { */
+/*   position: relative; */
+/*   padding-left: 1.375rem; */
+/* } */
+/**/
+/* ul:not(.unset):not(:where([class~="prose"] *)) > li::before { */
+/*   position: absolute; */
+/*   left: 0; */
+/*   content: "»"; */
+/*   color: rgb(var(--color-text-muted)); */
+/* } */
+/**/
+/* ol:not(.unset):not(:where([class~="prose"] *)) { */
+/*   padding-left: 1.125rem; */
+/* } */
+/**/
+/* ol:not(.unset):not(:where([class~="prose"] *)) > li::marker { */
+/*   color: rgb(var(--color-text-muted)); */
+/* } */
+/**/
+/* ul:not(.unset):not(:where([class~="prose"] *)) > li, */
+/* ol:not(.unset):not(:where([class~="prose"] *)) > li { */
+/*   margin-top: 0.5em; */
+/*   margin-bottom: 0.5em; */
+/* } */

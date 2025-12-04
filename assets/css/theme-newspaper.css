@@ -6,6 +6,12 @@
 .theme-newspaper {
   --color-primary-main: rgb(15 23 42);
 
+  --color-label-blue: rgb(254 243 199);
+  --color-label-gray: rgb(254 243 199);
+  --color-label-yellow: rgb(254 243 199);
+  --color-label-orange: rgb(254 243 199);
+  --color-label-red: rgb(254 243 199);
+
   --color-text-body: rgb(15 23 42);
   --color-text-heading: rgb(15 23 42);
   --color-text-bold: rgb(15 23 42);
@@ -28,6 +34,11 @@
 @media (prefers-color-scheme: dark) {
   .theme-newspaper {
     --color-primary-main: rgb(255 255 255);
+    --color-label-blue: rgb(254 243 199 / 0.1);
+    --color-label-gray: rgb(254 243 199 / 0.1);
+    --color-label-yellow: rgb(254 243 199 / 0.1);
+    --color-label-orange: rgb(254 243 199 / 0.1);
+    --color-label-red: rgb(254 243 199 / 0.1);
 
     --color-text-body: rgb(229 229 229);
     --color-text-heading: rgb(255 255 255);
@@ -45,4 +56,3 @@
     --color-border-code: rgb(64 64 64 / 0.25);
   }
 }
-

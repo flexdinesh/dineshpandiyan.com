@@ -105,14 +105,6 @@
   font-weight: 600;
 }
 
-.prose code::before {
-  content: "`";
-}
-
-.prose code::after {
-  content: "`";
-}
-
 /* Pre/Code blocks */
 .prose pre {
   font-size: 0.875em;
@@ -283,3 +275,4 @@
 .prose > :last-child {
   margin-bottom: 0;
 }
+
