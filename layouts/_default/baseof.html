@@ -124,6 +124,14 @@
   <!-- CSS -->
   {{ $reset := resources.Get "css/reset.css" }}
   {{ $theme := resources.Get "css/theme-newspaper.css" }}
+  <!-- {{ $chroma := resources.Get "css/chroma-catppuccin-mocha.css" }} -->
+  <!-- {{ $chroma := resources.Get "css/chroma-tokyo-night.css" }} -->
+  <!-- {{ $chroma := resources.Get "css/chroma-gruvbox.css" }} -->
+  <!-- {{ $chroma := resources.Get "css/chroma-minimal.css" }} -->
+  <!-- {{ $chroma := resources.Get "css/chroma-native.css" }} -->
+  <!-- {{ $chroma := resources.Get "css/chroma-tokyo-night.css" }} -->
+  {{ $chromadark := resources.Get "css/chroma-catppuccin-mocha.css" }}
+  {{ $chromalight := resources.Get "css/chroma-gruvbox.css" }}
   {{ $global := resources.Get "css/global.css" }}
   {{ $utilities := resources.Get "css/utilities.css" }}
   {{ $components := resources.Get "css/components.css" }}
@@ -132,7 +140,7 @@
   {{ $layout := resources.Get "css/layouts/_default.css" }}
   {{ $header := resources.Get "css/partials/header.css" }}
   {{ $footer := resources.Get "css/partials/footer.css" }}
-  {{ $css := slice  $reset $theme $global $utilities $components $font $prose $layout $header $footer | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint "md5" }}
+  {{ $css := slice  $reset $theme $chromadark $chromalight $global $utilities $components $font $prose $layout $header $footer | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint "md5" }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
 
   <!-- Theme Init Script (inlined to prevent FOUC) -->

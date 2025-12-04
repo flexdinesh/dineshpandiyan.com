@@ -1,14 +1,18 @@
 ---
-title: Stacked Diffs with git rebase --onto
+title: Stacked Diffs with `git rebase --onto`
 slug: stacked-diffs-with-rebase-onto
-description: Using git rebase --onto workflow to work with stacked diffs
+description: Using git `rebase --onto` workflow to work with stacked diffs
 date: 2025-12-01
 params:
   featured: true
   external: false
 ---
 
-_**tldr;** Use `git rebase --onto <new-base> <old-base> <branch>` to cleanly rebase a dependent branch without dragging along commits that don't belong to it._
+_**tldr;** Use `git rebase --onto` to cleanly rebase a dependent branch without dragging along commits that don't belong to it._
+
+```bash
+git rebase --onto <new-base> <old-base> <branch>
+```
 
 If you've ever worked on a larger feature and split your work into multiple PRs that depend on each other, you've probably experienced the pain of keeping them in sync. This workflow is called **stacked diffs** (or stacked PRs), and it's incredibly powerful. But it comes with a learning curve. The secret weapon? `git rebase --onto`.
 
@@ -110,7 +114,7 @@ git checkout feature-1
 git checkout -b feature-2
 
 # feature-2-base is your marker
-# when you update feature-1 later, 
+# when you update feature-1 later,
 # the marker will have feature-1 branch's previous state
 git branch feature-2-base feature-1
 ```

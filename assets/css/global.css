@@ -3,7 +3,15 @@
 /* ============================================ */
 :root {
   font-family:
-    "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    "Roboto Mono",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    Liberation Mono,
+    Courier New,
+    monospace;
   /* ui-monospace,
     -apple-system,
     BlinkMacSystemFont,
@@ -18,7 +26,6 @@
   transition: background-color 0.3s ease;
   scrollbar-gutter: stable;
 }
-
 
 body {
   font-size: 16px;
@@ -35,7 +42,15 @@ h4,
 h5,
 h6 {
   font-family:
-    "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    "Roboto Mono",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    Liberation Mono,
+    Courier New,
+    monospace;
   /* ui-monospace,
     -apple-system,
     BlinkMacSystemFont,
@@ -108,8 +123,11 @@ a:not(.unset) {
   background-repeat: no-repeat;
   background-size: 100% 1.5px;
   background-position: 0 100%;
-  background-image:
-    linear-gradient(to right, var(--color-text-link), var(--color-text-link));
+  background-image: linear-gradient(
+    to right,
+    var(--color-text-link),
+    var(--color-text-link)
+  );
 }
 
 a:not(.unset):hover {
@@ -197,7 +215,15 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    Liberation Mono,
+    Courier New,
+    monospace;
   font-size: 1em;
 }
 
@@ -216,18 +242,18 @@ code:not(pre code):not(.unset) {
 @media (prefers-color-scheme: dark) {
   code:not(pre code):not(.unset) {
     background-color: var(--color-bg-code);
-    border-color: var(--color-border-code)
+    border-color: var(--color-border-code);
   }
 }
 
 pre {
-  /* background-color: var(--color-bg-code); */
+  background-color: var(--color-bg-code);
   border: 1px solid var(--color-border-code);
   border-radius: 6px;
   padding: 1rem;
   overflow-x: auto;
   margin: 1.5em 0;
-  scrollbar-color: var(--color-border-code) var(--color-bg-code);
+  scrollbar-color: auto;
 }
 
 pre::-webkit-scrollbar {
@@ -235,7 +261,7 @@ pre::-webkit-scrollbar {
 }
 
 pre::-webkit-scrollbar-track {
-  background: var(--color-bg-code);
+  background: var(--color-border-code);
 }
 
 pre::-webkit-scrollbar-thumb {

@@ -1,0 +1,613 @@
+/* Syntax Highlighting */
+/* ============================================ */
+/* Loaded separately via Hugo pipes in baseof.html */
+
+.theme-newspaper .chroma {
+  --color-bg-code: var(--color-bg-body);
+}
+
+/* Light theme - github style */
+.theme-newspaper .bg {
+  background-color: var(--color-bg-body);
+}
+
+.theme-newspaper .chroma {
+  background-color: var(--color-bg-code);
+}
+
+.theme-newspaper .chroma .err {
+  color: #f6f8fa;
+  background-color: #82071e;
+}
+
+.theme-newspaper .chroma .lnlinks {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.theme-newspaper .chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.theme-newspaper .chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.theme-newspaper .chroma .hl {
+  background-color: #e5e5e5;
+}
+
+.theme-newspaper .chroma .lnt {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #7f7f7f;
+}
+
+.theme-newspaper .chroma .ln {
+  white-space: pre;
+  -webkit-user-select: none;
+  user-select: none;
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: #7f7f7f;
+}
+
+.theme-newspaper .chroma .line {
+  display: flex;
+}
+
+.theme-newspaper .chroma .k {
+  color: #cf222e;
+}
+
+.theme-newspaper .chroma .kc {
+  color: #cf222e;
+}
+
+.theme-newspaper .chroma .kd {
+  color: #cf222e;
+}
+
+.theme-newspaper .chroma .kn {
+  color: #cf222e;
+}
+
+.theme-newspaper .chroma .kp {
+  color: #cf222e;
+}
+
+.theme-newspaper .chroma .kr {
+  color: #cf222e;
+}
+
+.theme-newspaper .chroma .kt {
+  color: #cf222e;
+}
+
+.theme-newspaper .chroma .na {
+  color: #1f2328;
+}
+
+.theme-newspaper .chroma .nc {
+  color: #1f2328;
+}
+
+.theme-newspaper .chroma .no {
+  color: #0550ae;
+}
+
+.theme-newspaper .chroma .nd {
+  color: #0550ae;
+}
+
+.theme-newspaper .chroma .ni {
+  color: #6639ba;
+}
+
+.theme-newspaper .chroma .nl {
+  color: #900;
+  font-weight: bold;
+}
+
+.theme-newspaper .chroma .nn {
+  color: #24292e;
+}
+
+.theme-newspaper .chroma .nx {
+  color: #1f2328;
+}
+
+.theme-newspaper .chroma .nt {
+  color: #0550ae;
+}
+
+.theme-newspaper .chroma .nb {
+  color: #6639ba;
+}
+
+.theme-newspaper .chroma .bp {
+  color: #6a737d;
+}
+
+.theme-newspaper .chroma .nv {
+  color: #953800;
+}
+
+.theme-newspaper .chroma .vc {
+  color: #953800;
+}
+
+.theme-newspaper .chroma .vg {
+  color: #953800;
+}
+
+.theme-newspaper .chroma .vi {
+  color: #953800;
+}
+
+.theme-newspaper .chroma .vm {
+  color: #953800;
+}
+
+.theme-newspaper .chroma .nf {
+  color: #6639ba;
+}
+
+.theme-newspaper .chroma .fm {
+  color: #6639ba;
+}
+
+.theme-newspaper .chroma .s {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .sa {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .sb {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .sc {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .dl {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .sd {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .s2 {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .se {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .sh {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .si {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .sx {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .sr {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .s1 {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .ss {
+  color: #0a3069;
+}
+
+.theme-newspaper .chroma .m {
+  color: #116329;
+}
+
+.theme-newspaper .chroma .mb {
+  color: #116329;
+}
+
+.theme-newspaper .chroma .mf {
+  color: #116329;
+}
+
+.theme-newspaper .chroma .mh {
+  color: #116329;
+}
+
+.theme-newspaper .chroma .mi {
+  color: #116329;
+}
+
+.theme-newspaper .chroma .il {
+  color: #116329;
+}
+
+.theme-newspaper .chroma .mo {
+  color: #116329;
+}
+
+.theme-newspaper .chroma .o {
+  color: #1f2328;
+}
+
+.theme-newspaper .chroma .ow {
+  color: #1f2328;
+}
+
+.theme-newspaper .chroma .c {
+  color: #6a737d;
+}
+
+.theme-newspaper .chroma .ch {
+  color: #6a737d;
+}
+
+.theme-newspaper .chroma .cm {
+  color: #6a737d;
+}
+
+.theme-newspaper .chroma .c1 {
+  color: #6a737d;
+}
+
+.theme-newspaper .chroma .cs {
+  color: #6a737d;
+}
+
+.theme-newspaper .chroma .cp {
+  color: #1f2328;
+}
+
+.theme-newspaper .chroma .cpf {
+  color: #1f2328;
+}
+
+.theme-newspaper .chroma .gd {
+  color: #82071e;
+}
+
+.theme-newspaper .chroma .ge {
+  font-style: italic;
+}
+
+.theme-newspaper .chroma .gr {
+  color: #f6f8fa;
+}
+
+.theme-newspaper .chroma .gh {
+  color: #0550ae;
+  font-weight: bold;
+}
+
+.theme-newspaper .chroma .gi {
+  color: #116329;
+}
+
+.theme-newspaper .chroma .go {
+  color: #54aeff;
+}
+
+.theme-newspaper .chroma .gp {
+  color: #6a737d;
+}
+
+.theme-newspaper .chroma .gs {
+  font-weight: bold;
+}
+
+.theme-newspaper .chroma .gu {
+  color: #0550ae;
+}
+
+.theme-newspaper .chroma .gt {
+  color: #82071e;
+}
+
+.theme-newspaper .chroma .gl {
+  text-decoration: underline;
+}
+
+.theme-newspaper .chroma .w {
+  color: #6a737d;
+}
+
+/* Dark theme - monokai style */
+@media (prefers-color-scheme: dark) {
+  .theme-newspaper .bg {
+    color: #f8f8f2;
+    /* background-color: rgb(38 38 38); */
+  }
+
+  .theme-newspaper .chroma {
+    color: #f8f8f2;
+    /* background-color: rgb(38 38 38); */
+  }
+
+  .theme-newspaper .chroma .err {
+    color: #960050;
+    background-color: #1e0010;
+  }
+
+  .theme-newspaper .chroma .lnlinks {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .theme-newspaper .chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .theme-newspaper .chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .theme-newspaper .chroma .hl {
+    background-color: #3c3d38;
+  }
+
+  .theme-newspaper .chroma .lnt {
+    white-space: pre;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f;
+  }
+
+  .theme-newspaper .chroma .ln {
+    white-space: pre;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f;
+  }
+
+  .theme-newspaper .chroma .line {
+    display: flex;
+  }
+
+  .theme-newspaper .chroma .k {
+    color: #66d9ef;
+  }
+
+  .theme-newspaper .chroma .kc {
+    color: #66d9ef;
+  }
+
+  .theme-newspaper .chroma .kd {
+    color: #66d9ef;
+  }
+
+  .theme-newspaper .chroma .kn {
+    color: #f92672;
+  }
+
+  .theme-newspaper .chroma .kp {
+    color: #66d9ef;
+  }
+
+  .theme-newspaper .chroma .kr {
+    color: #66d9ef;
+  }
+
+  .theme-newspaper .chroma .kt {
+    color: #66d9ef;
+  }
+
+  .theme-newspaper .chroma .na {
+    color: #a6e22e;
+  }
+
+  .theme-newspaper .chroma .nc {
+    color: #a6e22e;
+  }
+
+  .theme-newspaper .chroma .no {
+    color: #66d9ef;
+  }
+
+  .theme-newspaper .chroma .nd {
+    color: #a6e22e;
+  }
+
+  .theme-newspaper .chroma .ne {
+    color: #a6e22e;
+  }
+
+  .theme-newspaper .chroma .nx {
+    color: #a6e22e;
+  }
+
+  .theme-newspaper .chroma .nt {
+    color: #f92672;
+  }
+
+  .theme-newspaper .chroma .nf {
+    color: #a6e22e;
+  }
+
+  .theme-newspaper .chroma .fm {
+    color: #a6e22e;
+  }
+
+  .theme-newspaper .chroma .l {
+    color: #ae81ff;
+  }
+
+  .theme-newspaper .chroma .ld {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .s {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .sa {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .sb {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .sc {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .dl {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .sd {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .s2 {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .se {
+    color: #ae81ff;
+  }
+
+  .theme-newspaper .chroma .sh {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .si {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .sx {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .sr {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .s1 {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .ss {
+    color: #e6db74;
+  }
+
+  .theme-newspaper .chroma .m {
+    color: #ae81ff;
+  }
+
+  .theme-newspaper .chroma .mb {
+    color: #ae81ff;
+  }
+
+  .theme-newspaper .chroma .mf {
+    color: #ae81ff;
+  }
+
+  .theme-newspaper .chroma .mh {
+    color: #ae81ff;
+  }
+
+  .theme-newspaper .chroma .mi {
+    color: #ae81ff;
+  }
+
+  .theme-newspaper .chroma .il {
+    color: #ae81ff;
+  }
+
+  .theme-newspaper .chroma .mo {
+    color: #ae81ff;
+  }
+
+  .theme-newspaper .chroma .o {
+    color: #f92672;
+  }
+
+  .theme-newspaper .chroma .ow {
+    color: #f92672;
+  }
+
+  .theme-newspaper .chroma .c {
+    color: #75715e;
+  }
+
+  .theme-newspaper .chroma .ch {
+    color: #75715e;
+  }
+
+  .theme-newspaper .chroma .cm {
+    color: #75715e;
+  }
+
+  .theme-newspaper .chroma .c1 {
+    color: #75715e;
+  }
+
+  .theme-newspaper .chroma .cs {
+    color: #75715e;
+  }
+
+  .theme-newspaper .chroma .cp {
+    color: #75715e;
+  }
+
+  .theme-newspaper .chroma .cpf {
+    color: #75715e;
+  }
+
+  .theme-newspaper .chroma .gd {
+    color: #f92672;
+  }
+
+  .theme-newspaper .chroma .ge {
+    font-style: italic;
+  }
+
+  .theme-newspaper .chroma .gi {
+    color: #a6e22e;
+  }
+
+  .theme-newspaper .chroma .gs {
+    font-weight: bold;
+  }
+
+  .theme-newspaper .chroma .gu {
+    color: #75715e;
+  }
+}
